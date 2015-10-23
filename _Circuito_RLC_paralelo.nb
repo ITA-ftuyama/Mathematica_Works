@@ -1,0 +1,1406 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     69681,       1397]
+NotebookOptionsPosition[     69014,       1369]
+NotebookOutlinePosition[     69358,       1384]
+CellTagsIndexPosition[     69315,       1381]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Circuito RLC paralelo", "Title",
+ CellChangeTimes->{{3.587843552449934*^9, 3.587843604577612*^9}, {
+   3.5880926773008614`*^9, 3.5880926840980825`*^9}, {3.591942603441222*^9, 
+   3.591942609686378*^9}, 3.594115361699109*^9, {3.5941343478831463`*^9, 
+   3.594134351977106*^9}, {3.5942412414620132`*^9, 3.5942412686665163`*^9}, {
+   3.602712657588518*^9, 3.602712664292*^9}, {3.6027734491878147`*^9, 
+   3.6027734502034907`*^9}, {3.602773760219905*^9, 3.6027737664077587`*^9}, {
+   3.609763643537114*^9, 3.6097636465160975`*^9}, {3.616437207340285*^9, 
+   3.6164372094827204`*^9}, {3.616507738010833*^9, 3.6165077396671963`*^9}},
+ TextAlignment->Center],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+  "Felipe", " ", "Tuyama", " ", "de", " ", "Faria", " ", 
+   "Barbosa"}]}]], "Subsection",
+ CellChangeTimes->{{3.5942412793077073`*^9, 3.594241320809795*^9}, {
+   3.5942414776771555`*^9, 3.594241486536981*^9}, 3.6164372313633327`*^9},
+ TextAlignment->Center],
+
+Cell[CellGroupData[{
+
+Cell["Simula\[CCedilla]\[ATilde]o", "Subtitle",
+ CellChangeTimes->{{3.5882587505519934`*^9, 3.588258752302086*^9}, {
+  3.616437250322997*^9, 3.616437252175234*^9}},
+ TextAlignment->Center,
+ FontFamily->"Arial",
+ FontSize->22,
+ FontWeight->"Bold",
+ Background->GrayLevel[0.900008]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"Remove", "::", "\"\<rmnsm\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"General", "::", "\"\<spell1\>\""}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"General", "::", "\"\<spell\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"Solve", "::", "\"\<ifun\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Remove", "[", "\"\<`*\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$Line", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Names", "[", "\"\<`*\>\"", "]"}]}], "Input",
+ CellChangeTimes->{{3.5299418173482122`*^9, 3.5299418247082224`*^9}, {
+  3.52995858632915*^9, 3.5299585870781937`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"circuit\"\>", ",", "\<\"sol\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.609848087885*^9, {3.609848129943487*^9, 3.6098481503195477`*^9}, 
+   3.609848417969673*^9, 3.6098486722798166`*^9, 3.6098490740694847`*^9, 
+   3.609850874894486*^9, 3.6098509368680153`*^9, 3.609851318626802*^9, 
+   3.6098513901176944`*^9, 3.6098517635956683`*^9, 3.6098517955281715`*^9, 
+   3.609851861578923*^9, 3.609852237131915*^9, 3.609852274250554*^9, 
+   3.6098694893549514`*^9, {3.609869521438376*^9, 3.609869530136174*^9}, 
+   3.6098697222775574`*^9, 3.6098697665441065`*^9, 3.6098699761766605`*^9, {
+   3.609870016991292*^9, 3.609870018178852*^9}, 3.609870075813261*^9, 
+   3.6098701728808208`*^9, {3.609870226894653*^9, 3.6098702449737206`*^9}, 
+   3.609870589023079*^9, 3.609870707802307*^9, 3.6098711959609337`*^9, 
+   3.609871279949684*^9, {3.609871547916789*^9, 3.609871575652609*^9}, 
+   3.6098716449389067`*^9, {3.609871691769476*^9, 3.6098717215054026`*^9}, 
+   3.6099205316123486`*^9, 3.6099205790835752`*^9, 3.6099206103508315`*^9, 
+   3.6099207305914783`*^9, 3.609920904006775*^9, 3.6099209357740593`*^9, {
+   3.609920987542383*^9, 3.609921001558741*^9}, {3.609921050295659*^9, 
+   3.609921075593853*^9}, 3.616437869021951*^9, 3.6164379673865023`*^9, 
+   3.616438050000219*^9, {3.6164381122378683`*^9, 3.6164381382392364`*^9}, 
+   3.6164383198269176`*^9, 3.616438376595523*^9, 3.616438529650454*^9, 
+   3.6164388059987307`*^9, 3.616438916703676*^9, 3.61643901261874*^9, {
+   3.616439085392351*^9, 3.6164390960884943`*^9}, {3.616439128477128*^9, 
+   3.616439161375103*^9}, 3.6164392006173153`*^9, 3.6164392483532*^9, {
+   3.6164392793028736`*^9, 3.616439348792287*^9}, 3.6164394324581785`*^9, {
+   3.616439557047393*^9, 3.616439584440689*^9}, 3.616439730340725*^9, 
+   3.616439773655509*^9, 3.616439979166318*^9, 3.6164404726610193`*^9, 
+   3.616440732955965*^9, 3.61644082155437*^9, 3.6164408610876985`*^9, {
+   3.616441221997308*^9, 3.61644125724916*^9}, 3.6164413517072535`*^9, 
+   3.6164415086373825`*^9, {3.6164425113463717`*^9, 3.6164425748965964`*^9}, 
+   3.6164426898401337`*^9, 3.616442731092304*^9, {3.6164429040545263`*^9, 
+   3.616442926383825*^9}, 3.61644296174506*^9, {3.6164430257171745`*^9, 
+   3.61644304542134*^9}, {3.6164432721832695`*^9, 3.6164432950282145`*^9}, 
+   3.616443543166269*^9, 3.6164436964555817`*^9, {3.61650170016243*^9, 
+   3.616501720616634*^9}, 3.6165017578060904`*^9, 3.6165017891514854`*^9, 
+   3.6165018616240473`*^9, {3.6165019256742983`*^9, 3.6165019413626165`*^9}, 
+   3.616502061790826*^9, 3.616502431841546*^9, 3.616503111484029*^9, 
+   3.616503209504811*^9, 3.6165032634295225`*^9, {3.616503495629239*^9, 
+   3.6165035222400064`*^9}, 3.6165035535541563`*^9, {3.616503603869306*^9, 
+   3.61650364677781*^9}, 3.6165037358606176`*^9, 3.6165037950356045`*^9, {
+   3.616503841256792*^9, 3.616503863304821*^9}, 3.616503899541103*^9, 
+   3.616503948434304*^9, {3.616503992467863*^9, 3.6165040146565313`*^9}, 
+   3.616504057783806*^9, 3.616504202978942*^9, {3.6165042527159367`*^9, 
+   3.616504274545201*^9}, {3.616504378066271*^9, 3.616504392442032*^9}, {
+   3.616505253544364*^9, 3.6165052761549406`*^9}, 3.616505332939164*^9, {
+   3.6165053698786077`*^9, 3.616505517683256*^9}, {3.616506310055173*^9, 
+   3.616506325493479*^9}, {3.616506392278242*^9, 3.61650640080995*^9}, 
+   3.6165065537554903`*^9, {3.616506618633898*^9, 3.616506647526041*^9}, {
+   3.6165067134670115`*^9, 3.61650676081326*^9}, {3.6165068126753607`*^9, 
+   3.6165068293168526`*^9}, {3.616506899008024*^9, 3.616506970777419*^9}, 
+   3.6165070191862164`*^9, 3.6165071357704706`*^9, {3.6165072438074045`*^9, 
+   3.6165072704181824`*^9}, {3.6165073672045193`*^9, 3.616507388486889*^9}, 
+   3.6165074329736032`*^9, {3.6165074960606127`*^9, 3.61650750417041*^9}, {
+   3.6165075356095705`*^9, 3.616507549922815*^9}, {3.6165075948158016`*^9, 
+   3.616507598941021*^9}, {3.616507648849896*^9, 3.6165076648351088`*^9}, 
+   3.6165077072123375`*^9, 3.616507906254059*^9, 3.6165079780234647`*^9, 
+   3.616508047167719*^9, 3.6165081309221263`*^9, {3.616508194972371*^9, 
+   3.6165082240988984`*^9}, {3.616508434953746*^9, 3.6165084773934765`*^9}, 
+   3.616508564069906*^9, {3.616508619510324*^9, 3.616508641589615*^9}, 
+   3.6165087831283054`*^9, 3.6165088857586994`*^9, {3.6165089221043687`*^9, 
+   3.616508950105834*^9}, 3.6165090272973957`*^9, 3.616509062752388*^9, 
+   3.6165091082235327`*^9, 3.6165091630076714`*^9, 3.6165092461057777`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"circuit", "=", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1:eJzt3VuzJFd5p3HmcDFfY76GmDHWEUmtVutgBAYDg2IEM6CwCAGSQaaRQIeg
+JSFZ7paMBcyMzMEy4dCMkI3BwckBYm5msKa4ssQNBIfL8VhcIIWiptdu51Z2
+debelVW5ar/55u+JSFt0795PrXr/a72VWauy/u3Nt93w3n/5hje84UP/5uz/
+ueE9d158++3v+eiN//rs/7jkox++5eZ/dfY/jp39+1//ize8ofzhEgAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAeyWCyWP//5z6seHBwcHBwcHLtx1IaDg4ODg4OjviPTWDg4ODg4
+OObsyDQWDg4ODg6OOTsyjYWDg4ODg2POjkxj4eDg4ODgmLMj01g4ODg4ODjm
+7Mg0Fg4ODg4Ojjk7Mo2Fg4ODg4Njzo5MY+Hg4ODg4JizI9NYODg4ODg45uzI
+NBYODg4ODo45OzKNhYODg4ODY86OTGPh4ODg4OCYsyPTWDg4ODg4OObsyDQW
+Dg4ODg6OOTsyjYWDg4ODg2POjkxj4eDg4ODgmLMj01g4ODg4ODjm7Mg0Fg4O
+Dg4Ojjk7Mo2Fg4ODg4Njzo5MY+Hg4ODg4JizI9NYODg4ODg45uzINBYODg4O
+Do45OzKNhYODg4ODY86OxWKx39trHRwcHBwcHBy7cezitQMHBwcHBwdHXUem
+sXBwcHBwcMzZkWksHBwc8R2vvfba8sN3nVy+8bKr9o7vff/5tf7dC4sf7/+b
+W2794PI3r7yyzcPtJdJzxcEx1JFpLBwcY/Ojv39hecWJG/d7Sd9xybHrli+/
+/OuNHGOPo937nvrK03s99NYP3bHVY1zl9GefvKAnt8fRfgz3PHDqvH/7ta9/
+Y3A/b/jWd7573thqkCW7HPN0ZBoLB0dtR1cvG9uxDa+++uryxFvfsd9Hazze
+QlfPbo+jr2//4pe/2n+NtNrr24/3TVceX7740k8u+PviOOxntiVrdjnm4cg0
+Fg6O2o7oPX1Xjua1Q/saReNoX1tfvTZwWD9ep6e3XxfUOFefYj04OBpHprFw
+cNR2rNvTV98z7roOvdr7/u8//uN+n+w7j22f/zZHu/91/X05fuvN13T2yHZv
+Hvo+wmr/bZ6rvnPxtmt1bH3P1+rPNo7GXeN99azZ5ZiHI9NYODhqO9bp6U1P
+a/fadj9r+tBqH2t6add5aN+5b/nzOz9+93k9fbVf9j3m9vXz5s+7/qyP1cfZ
+PFd9v2Od8+t1ztObcXb9XNdrlKH7H7Jml2Mejkxj4eCo7Tisp7d7b19vbfpQ
+X5/u6v+HvQ99EOXfXnb8+vP+bZdj9fEfdr6+OtbVc+jVf7/O64V1e/qQ1x5D
+yZpdjnk4Mo2Fg6O247Ce3u69fce2Pf2wz3MddK7a9PSDXiMM2YPWnC+Xx//i
+iy8d+Jqm6cMH/d51e3r78evpHByvOzKNhYOjtmNITz/sfHpIT191911Hbv9M
+c3276zz9oM+aDdkH2B7vM88+1/m+Q4OezsFR35FpLBwctR1Devph+7eG9vSu
+x9Du332vJ7p6+ljn6e0xlH/XnLd3Pe4xe3rftXfvp3PM3ZFpLBwctR1D3k8/
+rCdu2tMbVu8tM6Snj/F+ekPTx9/93vcvH37sTO8euHX2yPXtfWs4bI/cGGTN
+Lsc8HJnGwsFR2zFk33tXXyy9aJP300v/Xu3vq+e0XZ8ZX33M7V6/7b73rvEe
+1GcP+ixb12Pq6vs+y8bBcbAj01g4OGo7hrzX3Pf+d9dn2dbp6Qf9roaua89f
+evqrF5ynH/TzQ+8hu/qZvIP67DrX9Vc/Y7/6+XT3nOHg6HdkGgsHB0dsxzaf
+yWsc7g3LwdHvyDQWDg6O+A7f4cLBUc+RaSwcHBzxHb5rlYOjniPTWDg4ODg4
+OObsyDQWDg4ODg6OOTsyjYWDg4ODg2POjkxj4eDg4ODgmLMj01g4ODg4ODjm
+7Mg0Fg4ODg4Ojjk7FovFfm+vdXBwcHBwcHDsxrGL1w4cHBwcHBwcdR2ZxsLB
+wcHBwTFnR6axcHBwcHBwzNmRaSwcHBwcHBxzdmQaCwcHBwcHx5wdmcbCwcHB
+wcExZ0emsXBwcHBwcMzZkWksHBwcHBwcc3ZkGgsHBwcHB8ecHZnGwsHBwcHB
+MWdHprFwcHBwcHDM2ZFpLBwcHBwcHHN2ZBoLBwcHBwfHnB2ZxsLBwcHBwTFn
+R6axcHBwcHBwzNmRaSwcHBwcHBxzdmQaCwcHBwcHx5wdmcbCwcHBwcExZ0em
+sXBwcHBwcMzZkWksHBwcHBwcc3ZkGgsHB0dOx0OPnV5efvyG5WXXXL/8zOkn
+qnkKU3+uOObtyDQWDg6OfI57Tz20vPjYtcs3XnbV3nHx1dee7fFnqrgKU36u
+ODgyjYUjhuOJz/2X5UfuOrn8/FNfrHo8euYJjuSOk/c9sLzs+PXLN15+1X5P
+L/996TXXLe++/9OTGQdHXMfJex9YPvjoH1ddEwt6OsdUHftrr8PhcEzkqM2u
+1vbFYrHf22sdHPNyNHPkkdOPVz3uf/BhjuSOO/7wE8tLjp24YP299Nh1yzs+
+/onJjIMjrqPJ1NTX3bZjF68dOObjyPa6l+NoHQ8/dmb521e33k+/6sTe9dha
+TPm54hhOtvUqQ004YjmyzRGOo3c8cvqJ/Vw9/uQXqnkKU3+uOIaRbb3KUBOO
+WI5sc4QjhkOuOGqQLVcZasIRy5FtjnDEcMgVRw2y5SpDTThiObLNEY4YDrni
+qEG2XGWoCUcsR7Y5whHDIVccNciWqww14YjlyDZHOGI45IqjBtlylaEmHLEc
+2eYIRwyHXHHUIFuuMtSEI5Yj2xzhiOGQK44aZMtVhppwxHJkmyMcMRxyxVGD
+bLnKUBOOWI5sc4QjhkOuOGqQLVcZasIRy5FtjnDEcMgVRw2y5SpDTThiObLN
+EY4YDrniqEG2XGWoCUcsR7Y5whHDIVccNciWqww14YjlyDZHOGI45IqjBtly
+laEmHLEc2eYIRwyHXHHUIFuuMtSEI5Yj2xzhiOGQK44aZMtVhppwxHJkmyMc
+MRxyxVGDbLnKUBOOWI5sc4QjhkOuOGqQLVcZasIRy5FtjnDEcMgVRw2y5SpD
+TThiObLNEY4YDrniqEG2XGWoCUcsR7Y5whHDIVccNciWqww14YjlyDZHOGI4
+5IqjBtlylaEmHLEc2eYIRwyHXHHUIFuuFovFfm+vdXDMy9HMkamPgyOWQ644
+ahwZc7WL1w4c83Fke93LEcMhVxw1yJarDDXhiOXINkc4YjjkiqMG2XKVoSYc
+sRzZ5ghHDIdccdQgW64y1IQjliPbHOGI4ZArjhpky1WGmnDEcmSbIxwxHHLF
+UYNsucpQE45YjmxzhCOGQ644apAtVxlqwhHLkW2OcMRwyBVHDbLlKkNNOGI5
+ss0RjhgOueKoQbZcZagJRyxHtjnCEcMhVxw1yJarDDXhiOXINkc4YjjkiqMG
+2XKVoSYcsRzZ5ghHDIdccdQgW64y1IQjliPbHOGI4ZArjhpky1WGmnDEcmSb
+IxwxHHLFUYNsucpQE45YjmxzhCOGQ644apAtVxlqwhHLkW2OcMRwyBVHDbLl
+KkNNOGI5ss0RjhgOueKoQbZcZagJRyxHtjnCEcMhVxw1yJarDDXhiOXINkc4
+YjjkiqMG2XKVoSYcsRzZ5ghHDIdccdQgW64y1IQjliPbHOGI4ZArjhpky1WG
+mnDEcmSbIxwxHHLFUYNsucpQE45YjmxzhCOGQ644apAtVxlqwhHLkW2OcMRw
+yBVHDbLlKkNNOGI5ss0RjhgOueKoQbZcLRaL/d5e6+CYl6OZI1MfB0csh1xx
+1Dgy5moXrx045uPI9rqXI4ZDrjhqkC1XGWrCEcuRbY5wxHDIFUcNsuVqyjV5
+7bXXlh++6+R+Tb73/efX+ncvLH68/29uufWDy9+88spa/27Kz9UuHVOfI3IV
+0yFXclWDqedq1bELz7e+89395231eOorT1/w81/7+jfWyn3755559rlBj6k9
+T7oeQxcZ8rsLx67myDq5Wl1H11kb5SqmI1KuXn311eWJt77jgr9/05XHly++
+9JPO3ytXMR16+maeQjuX9zxw6ryf6ZsjfT39F7/81fKKEzfu/67VcZz+7JOH
+zrF1fqZrHDXJ4Nj1HDkoV83fdfX4S45dt3z55V+f9/NyFdcRKVdNf26vT03d
+u9YtuYrr0NM38xQOmiNtDpobqz/T5HuTOdKeZ+u89s2Q3104Iq295e9WM3TQ
+OY9cxXVEytVf/c03L6j/at9uI1dxHXr6Zp7CWD29fU7f/J7G0Xettc/ZuNZ5
+nypDfnfhiLT2dtH383IV2yFXclUDPX0zT2Gsnt71enWT172F5hra6s/1vRew
+enRdv90Gc2R9Nl172+9rtn9ermI7oueqLxtyFduhp2/mKYzV09u/p/n7TedI
+1+86bBw1yeCIvPaurn3ta5hyFdsRMVftft13/ixXsR16+maewtg9vZ3/TedI
+e06aI+MQce1taJ+jr2ZDrmI7Iueq0M5W12tFuYrp0NM38xT09MPJ4Ii69q6e
+U63uM5Kr2I6ouWpo17x9jVuuYjv09M08hYg9ve9alvenNifi2rtaz4OukcpV
+TEfEXLVp17ZWT5er8dHTN/MUdrlHrm8vySrr/lyXowYZHNHW3tW9xX17huUq
+tiNKrkqeyhq1mqF2ftoZk6vYDj19M09hF59la1j3vks+GzI+Udbewrr9vCBX
+sR1RctVkqn3O287ZQXvS5SqeQ08fzjb3Wuxbqw+7h0OhvWel63e4h0MddjVH
+1snVaga6jq57gclVPEekXLV7cPvo67VyFdehp2/mGZvD7rW4Du61WIcpzxG5
+iuuQK7mqwZRz1eWYck18J0JMx9TniFzFdMiVXNVg6rladUy5Jr67MKZj6nNE
+rmI65EquajD1XK06MtSEI5Yj2xzhiOGQK44aZMtVhppwxHJkmyMcMRxyxVGD
+bLnKUBOOWI5sc4QjhkOuOGqQLVcZasIRy5FtjnDEcMgVRw2y5SpDTThiObLN
+kYyOsj9r3T1amzrGRq44anDRpVftHbXR0zmm6rD2xnfUqJFccUzRkS1Xi8Vi
+v7fXOjjm5Whe9059HJkdzTo2pXHIFUeNo8ZcOOrnahevHTjm48j2ujejw3l6
+P1lrztFNtlxlqAlHLEe2OZLRoaf3k7XmHN1ky1WGmszNse3+JnOEQ0/vJ2vN
+p+go69zQ++gOJVuuMtR9bo5tM2jt5dDT+8la8yk6dlHzbLnKUPe5OfT0c0Sp
+xxQdeno/WWs+RYeePtyRoe5zc+jp54hSjyk69PR+stZ8ig49fbgjQ93n5tDT
+zxGlHlN06On9ZK35FB16+nBHhrrPzaGnnyNKPabo0NP7yVrzKTr09OGODHWf
+m0NPP0eUekzRoaf3k7XmU3To6cMdGeo+N4eefo4o9ZiiQ0/vJ2vNp+jQ04c7
+MtR9bg49/RxR6jFFh57eT9aaT9Ghpw93ZKj73Bx6+jmi1GOKDj29n6w1n6JD
+Tx/uyFD3uTn09HNEqccUHXp6P1lrPkWHnj7ckaHuc3Po6eeIUo8pOvT0frLW
+fIoOPX24I0Pd5+bQ088RpR5TdOjp/WSt+RQdevpwR4a6z82hp58jSj2m6NDT
++8la8yk6dtnT33zid5Z/cPKTy7/+xt8u/98//dPoHj2dow89/RxR6jFFh57e
+T9aaT9Gxi5q///aPLK++4aZ9V3Pce+rh5S9++avRPHo6Rx96+jmi1GOKDj29
+n6w1n6JjlzUv5+Z/9TffXN558p4LevsY5+16Okcfevo5otRjig49vZ+sNZ+i
+46hqXs7P7/30Q/v+G9/x7uU/vPTSqI4a6OnTdETu6WUuWHvjO/T0frLWfIqO
+o655Wc/e/d7377/fvk1f19M5+ojY0//X37+wd43q9WtWV47uWCVKPabo0NP7
+yVrzKTqi1Lw5Zy99fdP32PV0jj4i9fSyR/Td7/vAee8/3fmHn1g+9eWvjObo
+I0o9pujQ0/vJWvMpOiLVvHmfveyNr+XYFj19mo6j7unldernn/ri3mvW5rFc
+ceLG5ef+25/tv4aN8lxxdDv09H6y1nyKjkg1L/vkyjpXHs8m5+p6OkcfR9XT
+L7y+ftXee01lr+hYjiFwbO7Q0/vJWvMpOqLV/NEzf7L3eMr5Sy3HNhTHYrHY
+7+21Do5xHU3OdzWOLz/91eUtt952Xi//2Cc+ufzmt74d/rni6HZsm6GjGEeN
+xxylHhzTqPkzzz6393huu+Oj4Z6rtmMXrx04xnPs8jy9XG8qr0lvePu7z7vf
+0h89/tkDrz9Fea44uh3O0/vJWvMpOqLV/Hvff/7cnqGT91RzbEPT23fh4RjP
+cVTX3ss19g/cfsd55+tlv0i5Jj+WYwgcmzv09H6y1nyKjmg1n8K19wx1n5vj
+qPfIlc9otu/H0NyToX2f5CjPFUe3Q0/vJ2vNp+iIVPOytpV1rjyeTT6nrqdz
+9HHUPb3hoOvyP+o4dx+bKPWYokNP7ydrzafoiFTz5hy9XKus5dgWPX2ajig9
+vc2Q6/JjEaUeU3To6f1krfkUHWPUvOz7+d8v/J8LjvY93A8bx9N/+cz+Y3HP
+mRzZiuSI2NMb1rkuPxZR6jFFh57eT9aaT9Gxac337td+6uHz7qHRd9z0rpuX
+b7/5luXf/eD5C9ao8r/LuUnzs12f210XPZ2jj8g9veEfXnxxo/3yQ4hSjyk6
+9PR+stZ8io5Nal7OK9q9vKxB5Rri6tHcP6YcF1125ev33HjfB5Z/+T++tnz8
+yc/v/57ys2XP+zbo6Rx9TKGntx21rstHqccUHXp6P1lrPkXHJjVv7uFa/v9h
+5w/lPPyb3/7O8uHHzuz9/CXXXPd6n7/0yr1e/77fv32U8xA9naOPqfX0hrGv
+y0epxxQdeno/WWs+RccmNW/WmGZt6dujXs4pyvX2k/c+sHzbf/iPF/Ty9vXF
+bc/RC3o6Rx9T7ekNZS6tvs9V7jE7tK8f9Tim7NDT+8la8yk6Nql5WUea70cd
+epR/V/a3l/Pysk61ry+W9w23QU/n6GOqPb28Zr71Q+dfgy/Xuza9Bh+lHlN0
+6On9ZK35FB3b1Ly851fO2dt7elb7d1l/PnX2Z0q/7junKHvem/fey767TdHT
+OfqYUk8v86R8h1tzr4Zmv0nzWngMR02yOvT0frLWfIqOKDUv1++bvr7pdXg9
+naOPKfT0H/zwhxd8h1t5vVxeO4/1mbYo9ZiiQ0/vJ2vNp+iIVPPmM+rl/KSW
+Y1v09Gk6Ivf0sa+vH0SUekzRoaf3k7XmU3REq3nzPv0m5+p6Okcf0Xp61/X1
+y45fP8r19YOIUo8pOvT0frLWfIqOaDUv99woj8d3uHCM6YjS0/c+m9Zzfb3c
+c6Y2UeoxRYee3k/Wmk/REa3m5XpjeTyb3PNdT+fo46h7+jrX16M8VxzdDj29
+n6w1n6IjWs3L+cre/vdPP1TNsQ16+jQdR9HTh+5fj/JccXQ7xl4r9+7H9a1v
+d35XxljHGy+/au+o6SiHa0xxHNF6enM/m7JfrpZjG/T0aTp22dPLWr16fb30
+8sP2r0d5rji6HWOvlet8V8ZUjsuP3zDa89JH1lyNTaSeXt5rbB5P5PteZqj7
+3By7Pk8v19RX7+lavuegXIMfy3EQr7766vLEW99x4Do8xr0bu4hS87EdY6+V
+5XrNLbd+sPO7MsY6rnvbO5fH3/L2qo5y3LfGfUXKtan2d4CUo4z/N6+8stbz
+lTVXYxOlp+/dm+7smrfO/rj2etVel/R0jj6O6v30so6VPLfXsnJ+Vq7Jr15/
+33VPr9XXo9R8bMcU30+P4jj92Sd7M/imK48vX3zpJ1s7xiCDY9ucljWhrE/l
+O6PKHqBylP8uf1aOvfdazp5/HzSOsrY1/Xyde1jr6RxDHUe9R65Qrr2v3lO5
+XKNv9snV6uldc6RZY4ecJ61LlJqP7dDTN3O8sPhx52vI9nn7Ojk86nFMxbFp
+Tsu5x5D3g/7dFcf2en15n7x9flLWueb3rPudFHo6x1BHhJ7e0Hdd/stPf3U0
+x2FzpFln9fT1HXr6cMdrr722/PBdJ/eet6e+8vQFf/+1r39j7Qxmf67GYpOc
+NnvTmz5c+nv5s7JWlaOsIeXPylHeaynXVtrfw1aO63/3Xcurb7hp/3+Xz/Ws
++x66ns4x1BGppzcMuS4/lIPmSHudveeBU9sO4wKi1Hxsh54+3NGci697fX0T
+x5hkcGyS0+a71IbcF+YHP/yfy0dOP7G86Z3vOa+3//uz5+8PPPTIIP9R9/TF
+YrHf22sdHOM6mrxFHceX/vwvlm99183nzY2P3f2pvc86bfL7fvrTny6v+Z23
+HXjt7LfefM3y+bPzMmvNx3Zsm6Eo49il40dnz/HK/REvvvrE8sUXX5rsOKbk
+2CSnZf1p/t3bb37v8tEzT+xdNyzrTzn++9ee2/uzctxy623nztMvPX89ufYt
+v3v29dvr1+4/eMfH9j7juI6/vV498+xzR1KPXbx24BjPEfE8vcuxyX75Lg7b
+I9d1HXQsotR8bIfz9OGO5jz9kmPXLV9++ddVHGOSwbHN++mrn0s48P30y89d
+X+96P735PWXt8n766x6O8RxT6ekN216X75oj7b1KNa65d40jk0NPH+5w7X33
+jjH2vZe1p5xbNJ9VLP/dvJ9ezjvW2vf+z/uB1+nrejrHUMfUenqbw/bLd9E3
+R/7s7Pl57XP1KDUf2zF2T/+jxz+7dx2z+bxQjeO6t/3e8tqb3l7VUY77H/xM
+5xgP2yNXXmeuew6fNVdjU+O1ZxeHjWPv8+n/vG75fHqObEVyTLmnl7lRrm+1
+P2dSzn3Ka+e+1799c+RnP/vZ/ho7xrnTkHFM3TH2WjnkOmf0o7xn3kfZ2978
+nM+yzaenF9a9j5yezjHUMcWeXta8cj7e7uXlO9xKf9/mWtbQtXTbcdRgbEd5
+jsbqb+vex6e533vzeaEaR/OYajr2rsUecr9395zZnSNSTy+sc7/3de6RVfO6
+Yoa6z80xpZ7+dz94/oLvcCvvaQ2559u6n0+vMVei1HwIZb0Zq6cP+a6KOa3v
+7g27G0ekmhfW+V42PZ1jqCN6Ty/nbH/6hf96wXe4lXmw7WfV20SpRzRHef7H
+6ulDvqtibus7x/xq7vvTX/dwjOeI2tO3ub6+CVHqEdFRPpezbT8vv+Oox9Em
+2vrOMb+al/1x5fEMuZ/NUMc26OnTdETr6V3X18t1yFrfldYQpR4RHe37Y256
+lN9x1ONoE21955hfzZu975usbXr6PB3lvkNjXTfty90Y42j2r/ddX89Sjyk7
+ttmLXv7tUOa2vnNs5ziKvZzbjKPZp1KuPdZybIueHs9R3oceK+d9+5u2Gce6
+19ez1GPKjtV7+A05DtoD1IeezjGEo9rLuck4yufYmjXvoHtpbOMYAz09nqN8
+jmasnPe9h73JOIbuX89Sjyk72p//Gnpssm7p6RxDqL2Xs7x3VL4/tX0tsX2U
+e8KVNa2co5x65LHe9bL92mOT17oNevp8HbX3Nw0ZR/v+Sc1RXq+W162HjaM2
+HIdTrqEMzU7Ua4t6ej5HjbVub8062683+V3l35V7IpbrkeV1bfs85tEzf7LV
+WPX0+Tpq728aOo4yR8rvW+0P5fVtX2/PVI8pO8o6NDQ7m65dejrHUGqsdc17
+TmW9Kn/X9/nZsnaV64wf/9T9y3edPW9p9p9cdOmV532fevnzMfb76unzdtTc
+37TNOMpr19XX1uW17Op3rWWrx1QdZT0bmp9N7yGgp3NswthrXbM+levuh2W5
+nK/87be/u7zvwYcveG+x9PVy/Kfbbh/lvhp6+rwdNfc3jTGOkvFyPteej+V9
+q/Jda2WeZKvHlB2r750cdJSf3RQ9nWMTxl7ryvn36ndAdn1XT7t3r86Bcn5/
+5k8/t/97yu/Yxd76bdHT4zpq7m8acxx91+U/dvenDn3PfVuy1bwWQ/YXb7N/
+WE/n2IQaa93e53PO9vvD9pOUnv2Wd75n+a5b/vNez17dJ1f+d/u65NB7NrTR
+0zlq7W+quc96nevyY5Gx5jUYsr94m/v96ekcm1JzL2ez3231GPLZ2/b7/pue
+q+jpHLX2N9UeR5lD9516uPe6/FhkrHktbrvjo4dmZ+i9YFfR0zk2ZZd7ObtY
+ZxzNYyznKbUc26Knx3bU2t+0q3Fssl9+qKM2WRxf+vO/ODQ721xXLOjpHJuy
+y72cXawzjrKeNWvZJuuXns5RqLG/6SjGUeO6fNaa13IctL94k3vBdjlqoqfn
+duxqL2cX646jOVf3HS4cmzpq7G86yufqsP3yYzjGJJPjoP3F29wfq+2oiZ6e
+27GrvZxdrDuO5h71m7xPpadzFGrsbzrK56qcr5fPjbYfd7nH7CbXfbPWvJbj
+oP3Fm97DetVREz09t2NXezm70NOHezg2d6xz/8QhGdv1OMr8K9fYV++7XM4N
+t3lfPXPNazm69hdvei/YPkct9PT8jrHXunXJdO19sVjs9/ZaB8d2jnX2N5Wf
+iTaOH50997v/wc8sLz9+w/7jPPHW31s+cvrxve+qmWo9puwon0dYzU75symM
+o3m8merBcf4x9lo35jjKmtWsZWVtO+rn6iDHLl47cGznGHN/U+1xPPvXX1/e
+cusHR7m+fhDZa17D0bW/eKz9w7XH4Tx9Ho7aezm7WGcczTWETa8T7KoeU637
+3Bxj7m/a1do7xvX1g8he81qO9v7iMfcP6+kcY1B7L2cXh42jeUzlNUXU70No
+HFOt+9wcY+5v2tXaO/Y+llWy17yWo72/eMz9w3o6xxjU3svZRd84Sv9uvre1
+9PMp7P+Zat3n6Bhrf5O1d96O9v7iKd3XT67m46i5l7OL1XHs3S++tfekuLe9
+3qinc6zSdf/ETe6PaO3lKJ/JGeM7oQ9yjI1czccx1lq3LmUcpY+Xz+esfta2
+XHcf47Wvns6xylj7m6y9HFN0yNV8HDX3cq7y/ts/srzs+PWd793v+v6zYzim
+XPc5OsbY32Tt5ZiiQ67m5ai1l3OV9p76sqe9fD6nxl4gPZ2jizH2N1l7Oabo
+kKt5OWrt5VwlW66mXve5OcbY32Tt5ZiiQ67m5ai1l3OVbLmaet3n6Nh2f5O1
+l2OKDrman6Osc888+1xVR7ZcZag7RyxHtjnCEcMhVxw1yJarDDXhiOXINkc4
+YjjkiqMG2XKVoSYcsRzZ5ghHDIdccdQgW64y1IQjliPbHOGI4ZArjhpky1WG
+mnDEcmSbIxwxHHLFUYNsucpQE45YjmxzhCOGQ644apAtVxlqwhHLkW2OcMRw
+yBVHDbLlKkNNOGI5ss0RjhgOueKoQbZcZagJRyxHtjnCEcMhVxw1yJarDDXh
+iOXINkc4YjjkiqMG2XKVoSYcsRzZ5ghHDIdccdQgW64y1IQjliPbHOGI4ZAr
+jhpky1WGmnDEcmSbIxwxHHLFUYNsucpQE45YjmxzhCOGQ644apAtV4vFYr+3
+1zo45uW46NKr9o6pj4MjlkOuOGocGXO1i9cOHPNxZHvdyxHDIVccNciWqww1
+4YjlyDZHOGI45IqjBtlylaEmHLEc2eYIRwyHXHHUIFuuMtSEI5Yj2xzhiOGQ
+K44aZMtVhppwxHJkmyMcMRxyxVGDbLnKUBOOWI5sc4QjhkOuOGqQLVcZasIR
+y5FtjnDEcMgVRw2y5SpDTThiObLNEY4YDrniqEG2XGWoCUcsR7Y5whHDIVcc
+NciWqww14YjlyDZHOGI45IqjBtlylaEmHLEc2eYIRwyHXHHUIFuuMtSEI5Yj
+2xzhiOGQK44aZMtVhppwxHJkmyMcMRxyxVGDbLnKUBOOWI5sc4QjhkOuOGqQ
+LVcZasIRy5FtjnDEcMgVRw2y5SpDTThiObLNEY4YDrniqEG2XGWoCUcsR7Y5
+whHDIVccNciWqww14YjlyDZHOGI45IqjBtlylaEmHLEc2eYIRwyHXHHUIFuu
+MtSEI5Yj2xzhiOGQK44aZMtVhppwxHJkmyMcMRxyxVGDbLnKUBOOWI5sc4Qj
+hkOuOGqQLVcZasIRy5FtjnDEcMgVRw2y5SpDTThiObLNEY4YDrniqEG2XC0W
+i/3eXuvgmJejmSNTHwdHLIdccdQ4MuZqF68dOObjyPa6lyOGQ644apAtVxlq
+whHLkW2OcMRwyBVHDbLlKkNNOGI5ss0RjhgOueKoQbZcZagJRyxHtjnCEcMh
+Vxw1yJarDDXhiOXINkc4YjjkiqMG2XKVoSYcsRzZ5ghHDIdccdQgW64y1IQj
+liPbHOGI4ZArjhpky1WGmnDEcmSbIxwxHHLFUYNsucpQE45YjmxzhCOGQ644
+apAtVxlqwhHLkW2OcMRwyBVHDbLlKkNNOGI5ss0RjhgOueKoQbZcZagJRyxH
+tjnCEcMhVxw1yJarDDXhiOXINkc4YjjkiqMG2XKVoSYcsRzZ5ghHDIdccdQg
+W64y1IQjliPbHOGI4ZArjhpky1WGmnDEcmSbIxwxHHLFUYNsucpQE45Yjmxz
+hCOGQ644apAtVxlqwhHLkW2OcMRwyBVHDbLlKkNNOGI5ss0RjhgOueKoQbZc
+ZagJRyxHtjnCEcMhVxw1yJarDDXhiOXINkc4YjjkiqMG2XKVoSYcsRzZ5ghH
+DIdccdQgW64y1IQjliPbHOGI4ZArjhpky1WGmnDEcmSbIxwxHHLFUYNsuVos
+Fvu9vdbBMS9HM0emPg6OWA654qhxZMzVLl47cMzHke11L0cMh1xx1CBbrjLU
+hCOWI9sc4YjhkCuOGmTLVYaacMRyZJsjHDEccsVRg2y5ylATjliObHOEI4ZD
+rjhqkC1XGWrCEcuRbY5wxHDIFUcNsuUqQ004YjmyzRGOGA654qhBtlxlqAlH
+LEe2OcIRwyFXHDXIlqsMNeGI5cg2RzhiOOSKowbZcpWhJhyxHNnmCEcMh1xx
+1CBbrjLUhCOWI9sc4YjhkCuOGmTLVYaacMRyZJsjHDEccsVRg2y5ylATjliO
+bHOEI4ZDrjhqkC1XGWrCEcuRbY5wxHDIFUcNsuUqQ004YjmyzRGOGA654qhB
+tlxlqAlHLEe2OcIRwyFXHDXIlqsMNeGI5cg2RzhiOOSKowbZcpWhJhyxHNnm
+CEcMh1xx1CBbrjLUhCOWI9sc4YjhkCuOGmTLVYaacMRyZJsjHDEccsVRg2y5
+ylATjliObHOEI4ZDrjhqkC1XGWrCEcuRbY5wHL3jocdO7+fqM6efqOYpTP25
+4hhGtvUqQ004YjmyzRGOo3Xce+qh5cXHrt3P1cVXX3u2x5+p4ipM+bniGE62
+9SpDTThiOfbmyOVXLT//1BerHo+eeYIjueMT9z2wvOTYdfvrbnOUP7v7/lOT
+GQdHXEdZq/T04R6O+ThW11+HY+PjiquH/bnDseFRm12t7YvFYr+31zo45uV4
+8NE/Xv7+R/5g+cjpx6se9z/4MEdyx50fv3t5ydUn9tbciy49d5T/vuTY9cs7
+T949mXFwxHV8+K6Ty08+cGry627bsYvXDhwcHByb8PBjZ5a/fXXr/fSrTuxd
+j63FlJ8rDo5MY+Hg4MjpeOT0E8srrr1xednx65ePP/mFap7C1J8rjnk7Mo2F
+g4ODg4Njzo5MY+Hg4ODg4JizI9NYODg4ODg45uzINBYODg4ODo45OzKNhYOD
+g4ODY86OTGPh4ODg4OCYsyPTWDg4ODg4OObsyDQWDg4ODg6OOTsyjYWDg4OD
+g2POjkxj4eDg4ODgmLMj01g4ODg4ODjm7Mg0Fg4ODg4Ojjk7Mo2Fg4ODg4Nj
+zo5MY+Hg4ODg4JizI9NYODg4ODg45uzINBYODg4ODo45OzKNhYODg4ODY86O
+TGPh4ODg4OCYsyPTWDg4ODg4OObsyDQWDg4ODg6OOTsyjYWDg4ODg2POjkxj
+4eDg4ODgmLNjsVjs9/ZaBwcHBwcHB0d9x/8HfwngZQ==
+      "], {{0, 587}, {501, 0}}, {0, 255},
+      ColorFunction->RGBColor],
+     BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+     Selectable->False],
+    BaseStyle->"ImageGraphics",
+    ImageSizeRaw->{501, 587},
+    PlotRange->{{0, 501}, {0, 587}}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.616505323516795*^9, 3.6165053272669907`*^9}, {
+  3.6165054233814306`*^9, 3.616505425865928*^9}, {3.6165061678601866`*^9, 
+  3.616506171813521*^9}, {3.6165074208948517`*^9, 3.6165074296765547`*^9}, {
+  3.6165075814400983`*^9, 3.6165075977065783`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"sol", "=", 
+     RowBox[{"DSolve", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"V", "''"}], "[", "t", "]"}], "+", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"V", "'"}], "[", "t", "]"}], "/", 
+            RowBox[{"(", 
+             RowBox[{"R", "*", "C"}], ")"}]}], "+", 
+           RowBox[{
+            RowBox[{"V", "[", "t", "]"}], "/", 
+            RowBox[{"(", 
+             RowBox[{"L", "*", "C"}], ")"}]}]}], "\[Equal]", "0"}], ",", 
+         RowBox[{
+          RowBox[{"V", "[", "0", "]"}], "\[Equal]", "V0"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"V", "'"}], "[", "0", "]"}], "\[Equal]", "Vq0"}]}], "}"}], 
+       ",", "V", ",", "t"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"solucao", "=", 
+     RowBox[{"V", "/.", "\[InvisibleSpace]", 
+      RowBox[{"First", "[", "sol", "]"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Show", "[", 
+        RowBox[{"circuit", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "I"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Row", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"NumberForm", "[", 
+                  RowBox[{
+                   RowBox[{"N", "[", 
+                    RowBox[{
+                    RowBox[{"solucao", "[", "t", "]"}], "/.", 
+                    RowBox[{"t", "\[Rule]", "t1"}]}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}], ",", 
+                 "\"\< V\>\""}], "}"}], "]"}], ",", "20"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"365", ",", "315"}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"NumberForm", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"N", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"solucao", "[", "t", "]"}], "/", "R"}], "/.", 
+                    RowBox[{"t", "\[Rule]", "t1"}]}], "]"}], ",", 
+                   "\"\< A\>\""}], "}"}], "]"}], ",", "15"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"3", ",", "2"}], "}"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"120", ",", "215"}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"NumberForm", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"N", "[", 
+                    RowBox[{
+                    RowBox[{"C", "*", 
+                    RowBox[{
+                    RowBox[{"solucao", "'"}], "[", "t", "]"}]}], "/.", 
+                    RowBox[{"t", "\[Rule]", "t1"}]}], "]"}], ",", 
+                   "\"\< A\>\""}], "}"}], "]"}], ",", "15"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"3", ",", "2"}], "}"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"265", ",", "215"}], "}"}]}], "]"}], ",", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"NumberForm", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"N", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"solucao", "[", "t", "]"}]}], "/", "R"}], "-", 
+                    RowBox[{"C", "*", 
+                    RowBox[{
+                    RowBox[{"solucao", "'"}], "[", "t", "]"}]}]}], "/.", 
+                    RowBox[{"t", "\[Rule]", "t1"}]}], "]"}], ",", 
+                   "\"\< A\>\""}], "}"}], "]"}], ",", "15"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"3", ",", "2"}], "}"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"420", ",", "215"}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Row", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<V''(t)+\!\(\*FractionBox[\(1\), \
+\(RC\)]\)V'(t)+\!\(\*FractionBox[\(1\), \(LC\)]\)V(t)=0\>\"", ",", 
+                 "\"\<   \>\"", ",", 
+                 "\"\<\!\(\*SubscriptBox[\(\[Omega]\), \
+\(0\)]\)=\!\(\*SqrtBox[FractionBox[\(1\), \(LC\)]]\)=\>\"", ",", 
+                 RowBox[{"NumberForm", "[", 
+                  RowBox[{
+                   RowBox[{"N", "[", 
+                    RowBox[{"Sqrt", "[", 
+                    FractionBox["1", 
+                    RowBox[{"L", "*", "C"}]], "]"}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}], ",", 
+                 "\"\<   \>\"", ",", 
+                 "\"\<\[Gamma] =\!\(\*FractionBox[\(1\), \(RC\)]\)= \>\"", 
+                 ",", 
+                 RowBox[{"NumberForm", "[", " ", 
+                  RowBox[{
+                   RowBox[{"N", "[", 
+                    FractionBox["1", 
+                    RowBox[{"R", "*", "C"}]], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}], ",", 
+                 "\"\<    Q= \>\"", ",", 
+                 RowBox[{"NumberForm", "[", 
+                  RowBox[{
+                   RowBox[{"N", "[", 
+                    RowBox[{"R", "*", 
+                    RowBox[{"Sqrt", "[", 
+                    RowBox[{"C", " ", "/", "L"}], "]"}]}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}]}], "}"}], "]"}], 
+              ",", "13"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"250", ",", "400"}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<Principais par\[AHat]metros do problema:\>\"", ",", "13"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"250", ",", "450"}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<Simula\[CCedilla]\[ATilde]o do Circuito RLC paralelo\>\"", 
+              ",", "20"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"250", ",", "500"}], "}"}]}], "]"}]}], 
+         "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Dynamic", "[", "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{"{", "  ", "\[IndentingNewLine]", 
+      RowBox[{"Switch", "[", "  ", 
+       RowBox[{
+       "gr", ",", "\[IndentingNewLine]", "\"\<Tens\[ATilde]o\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Show", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             RowBox[{"solucao", "[", "t", "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+             RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", " ", 
+             RowBox[{"GridLinesStyle", "\[Rule]", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"Black", ",", "Dashed"}], "]"}]}], ",", 
+             RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"0.75", "I"}]}], ",", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"t", ",", "V"}], "}"}]}], ",", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"t", ",", "V"}], "}"}]}], ",", 
+             RowBox[{"PlotLegends", "\[Rule]", 
+              RowBox[{"{", "\"\<Tens\[ATilde]o\>\"", "}"}]}], ",", 
+             RowBox[{"PlotLabel", "\[Rule]", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+               "\"\<Tens\[ATilde]o no Circuito V(t) x t\>\"", ",", "15"}], 
+               "]"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"{", 
+             RowBox[{"Red", ",", 
+              RowBox[{"AbsolutePointSize", "[", "5", "]"}], ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{"t1", ",", 
+                 RowBox[{
+                  RowBox[{"solucao", "[", "t", "]"}], "/.", 
+                  RowBox[{"t", "\[Rule]", "t1"}]}]}], "}"}], "]"}]}], "}"}], 
+            "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+        "\[IndentingNewLine]", "\"\<Correntes\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Show", "[", 
+         RowBox[{"{", " ", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"solucao", "[", "t", "]"}], "/", "R"}], ",", 
+               RowBox[{"C", "*", 
+                RowBox[{
+                 RowBox[{"solucao", "'"}], "[", "t", "]"}]}], ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", 
+                  RowBox[{"solucao", "[", "t", "]"}]}], "/", "R"}], "-", 
+                RowBox[{"C", "*", 
+                 RowBox[{
+                  RowBox[{"solucao", "'"}], "[", "t", "]"}]}]}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+             RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+             RowBox[{"GridLinesStyle", "\[Rule]", "Dashed"}], ",", 
+             RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"0.75", "I"}]}], ",", 
+             RowBox[{"PlotLabel", "\[Rule]", 
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<Correntes do Circuito I(t) x t\>\"", ",", "15"}], 
+               "]"}]}], ",", 
+             RowBox[{"PlotLegends", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Resistor\>\"", ",", "\"\<Capacitor\>\"", ",", 
+                "\"\<Indutor\>\""}], "}"}]}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"{", 
+             RowBox[{"Red", ",", 
+              RowBox[{"AbsolutePointSize", "[", "5", "]"}], ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{"t1", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"solucao", "[", "t", "]"}], "/", "R"}], "/.", 
+                  RowBox[{"t", "\[Rule]", "t1"}]}]}], "}"}], "]"}]}], "}"}], 
+            "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+        "\[IndentingNewLine]", "\"\<Energia\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{"Show", "[", 
+         RowBox[{"{", " ", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"C", "*", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"solucao", "[", "t", "]"}], "^", "2"}], "/", 
+                  "2"}]}], "+", 
+                RowBox[{"L", "*", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"solucao", "[", "t", "]"}], "/", "R"}], "+", 
+                    RowBox[{"C", "*", 
+                    RowBox[{
+                    RowBox[{"solucao", "'"}], "[", "t", "]"}]}]}], ")"}], "^",
+                    "2"}], "/", "2"}]}]}], ",", 
+               RowBox[{"C", "*", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"solucao", "[", "t", "]"}], "^", "2"}], "/", 
+                 "2"}]}], ",", 
+               RowBox[{"L", "*", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"solucao", "[", "t", "]"}], "/", "R"}], "+", 
+                    RowBox[{"C", "*", 
+                    RowBox[{
+                    RowBox[{"solucao", "'"}], "[", "t", "]"}]}]}], ")"}], "^",
+                   "2"}], "/", "2"}]}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+             RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+             RowBox[{"GridLinesStyle", "\[Rule]", "Dashed"}], ",", 
+             RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"0.75", "I"}]}], ",", 
+             RowBox[{"PlotLabel", "\[Rule]", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+               "\"\<An\[AAcute]lise de Energia U(t)xt\>\"", ",", "15"}], 
+               "]"}]}], ",", 
+             RowBox[{"PlotLegends", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Total\>\"", ",", "\"\<Capacitor\>\"", ",", 
+                "\"\<Indutor\>\""}], "}"}]}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"{", 
+             RowBox[{"Red", ",", 
+              RowBox[{"AbsolutePointSize", "[", "5", "]"}], ",", 
+              RowBox[{"Line", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"t1", ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"t1", ",", 
+                   RowBox[{
+                    RowBox[{"1.1", "*", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"C", "*", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"solucao", "[", "t", "]"}], "^", "2"}], "/", 
+                    "2"}]}], "+", 
+                    RowBox[{"L", "*", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"solucao", "[", "t", "]"}], "/", "R"}], "+", 
+                    RowBox[{"C", "*", 
+                    RowBox[{
+                    RowBox[{"solucao", "'"}], "[", "t", "]"}]}]}], ")"}], "^",
+                     "2"}], "/", "2"}]}]}], ")"}]}], "/.", 
+                    RowBox[{"t", "\[Rule]", "t1"}]}]}], "}"}]}], "}"}], "]"}],
+               ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{"t1", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"L", "*", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"solucao", "[", "t", "]"}], "/", "R"}], "+", 
+                    RowBox[{"C", "*", 
+                    RowBox[{
+                    RowBox[{"solucao", "'"}], "[", "t", "]"}]}]}], ")"}], "^",
+                     "2"}], "/", "2"}]}], "+", 
+                   RowBox[{"C", "*", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"solucao", "[", "t", "]"}], "^", "2"}], "/", 
+                    "2"}]}]}], "/.", 
+                  RowBox[{"t", "\[Rule]", "t1"}]}]}], "}"}], "]"}]}], "}"}], 
+            "]"}]}], "\[IndentingNewLine]", "}"}], "]"}]}], 
+       "\[IndentingNewLine]", "]"}], " ", "\[IndentingNewLine]", "}"}], "]"}],
+     "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"gr", ",", "\"\<Tens\[ATilde]o\>\"", ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Gr\[AAcute]ficos\>\"", ",", "Bold", ",", "12"}], "]"}]}],
+       "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Tens\[ATilde]o\>\"", ",", "\"\<Correntes\>\"", ",", 
+       "\"\<Energia\>\""}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   "Delimiter", ",", 
+   RowBox[{"Item", "[", 
+    RowBox[{"\"\<Anima\[CCedilla]\[ATilde]o\>\"", ",", 
+     RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t1", ",", "0", ",", "\"\<Tempo (t)\>\""}], "}"}], ",", "0", 
+     ",", "tmax", ",", ".05", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Animator"}], ",", 
+     RowBox[{"DisplayAllSteps", "\[Rule]", "True"}], ",", 
+     RowBox[{"AppearanceElements", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<PlayPauseButton\>\"", ",", "\"\<DirectionButton\>\"", ",", 
+        "\"\<ResetButton\>\"", ",", "\"\<StepLeftButton\>\"", ",", 
+        "\"\<StepRightButton\>\""}], "}"}]}], ",", 
+     RowBox[{"AnimationRunning", "\[Rule]", "False"}], ",", 
+     RowBox[{"AnimationRate", "\[Rule]", "10"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t1", ",", "0", ",", "\"\<Tempo (t)\>\""}], "}"}], ",", "0", 
+     ",", "tmax", ",", ".1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"tmax", ",", "30", ",", "\"\<Tempo m\[AAcute]ximo (Tmax)\>\""}],
+       "}"}], ",", "10", ",", "100", ",", "1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", 
+   RowBox[{"Item", "[", 
+    RowBox[{"\"\<Condi\[CCedilla]\[OTilde]es Iniciais\>\"", ",", 
+     RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"V0", ",", "1", ",", "\"\<Voltagem Inicial (V0)\>\""}], "}"}], 
+     ",", "0", ",", "5", ",", ".1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Vq0", ",", "1", ",", "\"\<Derivada Inicial (V'0)\>\""}], "}"}],
+      ",", "0", ",", "5", ",", ".1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", 
+   RowBox[{"Item", "[", 
+    RowBox[{"\"\<Elementos do Circuito\>\"", ",", 
+     RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"L", ",", "1", ",", "\"\<Indut\[AHat]ncia (L)\>\""}], "}"}], 
+     ",", ".01", ",", "2", ",", ".01", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"C", ",", "1", ",", "\"\<Capacit\[AHat]ncia (C)\>\""}], "}"}], 
+     ",", ".01", ",", "2", ",", ".01", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"R", ",", "10", ",", "\"\<Resist\[EHat]ncia (R)\>\""}], "}"}], 
+     ",", ".1", ",", "50", ",", ".1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"I", ",", "400", ",", "\"\<Tamanho da Imagem\>\""}], "}"}], ",",
+      "300", ",", "700", ",", "100", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Right"}], ",", 
+   RowBox[{"SynchronousUpdating", "\[Rule]", "True"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.6096017120702825`*^9, 3.609601773370406*^9}, {
+   3.6096018473341694`*^9, 3.6096018787420783`*^9}, {3.609608605693009*^9, 
+   3.6096086070680623`*^9}, {3.60976366302112*^9, 3.6097636636195183`*^9}, {
+   3.6097637487823677`*^9, 3.6097639586754713`*^9}, {3.6097639970630956`*^9, 
+   3.6097640179820595`*^9}, {3.609764120317377*^9, 3.6097641212940254`*^9}, {
+   3.609764173929162*^9, 3.6097641844281693`*^9}, {3.6097642584595833`*^9, 
+   3.6097642690686655`*^9}, {3.609847833856148*^9, 3.6098478870307813`*^9}, {
+   3.6098480837910614`*^9, 3.609848143834838*^9}, {3.6098483017177963`*^9, 
+   3.6098484625032454`*^9}, {3.6098485441481333`*^9, 3.609848560477108*^9}, {
+   3.6098485994478917`*^9, 3.6098486300276175`*^9}, {3.6098486609042234`*^9, 
+   3.6098487129850645`*^9}, {3.6098487723370705`*^9, 
+   3.6098488519952445`*^9}, {3.609848885883868*^9, 3.609848889576331*^9}, {
+   3.6098489790240383`*^9, 3.6098490476128235`*^9}, {3.609849115945437*^9, 
+   3.6098491168250237`*^9}, {3.6098491542219887`*^9, 3.609849156578562*^9}, {
+   3.609849202532235*^9, 3.60984931564174*^9}, {3.609849484073866*^9, 
+   3.6098497109138255`*^9}, {3.609849852155569*^9, 3.6098498935014763`*^9}, {
+   3.6098499484418435`*^9, 3.609849991513135*^9}, {3.6098501593898153`*^9, 
+   3.609850197302452*^9}, {3.609850236023222*^9, 3.6098502528834867`*^9}, {
+   3.6098503184337716`*^9, 3.609850325918538*^9}, {3.609850652232828*^9, 
+   3.609850826366912*^9}, {3.6098508603468733`*^9, 3.6098508827542663`*^9}, {
+   3.6098509191952133`*^9, 3.609850999433775*^9}, {3.6098510478066893`*^9, 
+   3.609851052541339*^9}, {3.6098511030812387`*^9, 3.609851103346851*^9}, {
+   3.6098512073084855`*^9, 3.6098513025165787`*^9}, {3.6098513480529947`*^9, 
+   3.609851386945649*^9}, {3.6098514941601768`*^9, 3.6098517946843705`*^9}, {
+   3.609851912473527*^9, 3.6098519434382906`*^9}, 3.6098521311512084`*^9, {
+   3.6098694864430075`*^9, 3.6098694867071843`*^9}, {3.6098696845342393`*^9, 
+   3.609869763047772*^9}, {3.6098698048216567`*^9, 3.60986981603214*^9}, 
+   3.6098700511713476`*^9, {3.6098701609426994`*^9, 3.609870167583672*^9}, {
+   3.6098702072842827`*^9, 3.6098702253476973`*^9}, {3.6098706882562666`*^9, 
+   3.609870691625514*^9}, {3.6098708539514866`*^9, 3.6098708541858807`*^9}, {
+   3.6098709373642664`*^9, 3.609870940192539*^9}, {3.609870981996644*^9, 
+   3.609870982606053*^9}, {3.609871181632056*^9, 3.6098712769807816`*^9}, {
+   3.6098713199830217`*^9, 3.6098714883511796`*^9}, {3.609871533462912*^9, 
+   3.6098715719649205`*^9}, {3.6098716408903923`*^9, 
+   3.6098716891755953`*^9}, {3.60992057475525*^9, 3.609920607944455*^9}, {
+   3.609920677026212*^9, 3.6099207285288773`*^9}, {3.6099207744375157`*^9, 
+   3.609920805704775*^9}, {3.609920843159853*^9, 3.609920933164548*^9}, {
+   3.6099209795732174`*^9, 3.609921095235503*^9}, 3.616437437721167*^9, {
+   3.616437479688994*^9, 3.6164378620528345`*^9}, {3.616437940088214*^9, 
+   3.616437957636012*^9}, {3.6164379938722897`*^9, 3.6164381430832386`*^9}, {
+   3.616438274730816*^9, 3.616438393049511*^9}, {3.6164384547246304`*^9, 
+   3.6164384628031797`*^9}, {3.6164384966799617`*^9, 3.61643852807224*^9}, {
+   3.616438586714259*^9, 3.6164389155749207`*^9}, {3.616438976620695*^9, 
+   3.6164390109926553`*^9}, {3.6164390786148233`*^9, 3.616439159578906*^9}, {
+   3.616439191919508*^9, 3.6164391992714157`*^9}, {3.6164392690950546`*^9, 
+   3.6164393523736787`*^9}, 3.616439431385456*^9, {3.6164395540333824`*^9, 
+   3.616439579463363*^9}, {3.616439709620884*^9, 3.616439728700019*^9}, {
+   3.6164397613736067`*^9, 3.6164397836248074`*^9}, {3.6164398176890984`*^9, 
+   3.6164398387995543`*^9}, {3.6164399290230503`*^9, 3.616439930085605*^9}, {
+   3.6164404450501966`*^9, 3.6164404715672083`*^9}, {3.6164406809844804`*^9, 
+   3.616440739596935*^9}, {3.6164408188667336`*^9, 3.6164408601657724`*^9}, 
+   3.616440934685319*^9, {3.616440999094961*^9, 3.6164410081891856`*^9}, {
+   3.6164410888027987`*^9, 3.6164411054130487`*^9}, {3.6164412082465825`*^9, 
+   3.616441266249632*^9}, {3.6164413476133175`*^9, 3.6164413506134434`*^9}, {
+   3.616441500621338*^9, 3.616441506121624*^9}, {3.6164424961736975`*^9, 
+   3.616442567818097*^9}, {3.6164426425251455`*^9, 3.6164426863555803`*^9}, {
+   3.616442722216836*^9, 3.6164427266077204`*^9}, {3.6164429027732086`*^9, 
+   3.6164429251181335`*^9}, {3.616442997528198*^9, 3.6164430444994125`*^9}, {
+   3.6164432600576334`*^9, 3.6164433165293455`*^9}, {3.616443521696393*^9, 
+   3.616443541541187*^9}, {3.6164436007942977`*^9, 3.616443601575618*^9}, 
+   3.6164436867675743`*^9, {3.616443845182151*^9, 3.6164438464790983`*^9}, {
+   3.616501459425703*^9, 3.616501475080163*^9}, {3.61650171689769*^9, 
+   3.6165017177414856`*^9}, {3.616501750711971*^9, 3.616501788057678*^9}, {
+   3.6165018313255763`*^9, 3.616501860108343*^9}, {3.6165019385343404`*^9, 
+   3.6165019407219553`*^9}, {3.616502010366272*^9, 3.616502060931409*^9}, {
+   3.6165031007022104`*^9, 3.6165031068431587`*^9}, 3.616503207801613*^9, 
+   3.616503276820875*^9, {3.616503331761238*^9, 3.6165034108122773`*^9}, {
+   3.6165034659870553`*^9, 3.616503550929022*^9}, {3.6165035924624557`*^9, 
+   3.616503619448271*^9}, {3.616503725110052*^9, 3.6165037253131876`*^9}, {
+   3.6165037554397717`*^9, 3.6165037620495205`*^9}, {3.616503793582404*^9, 
+   3.616503862179763*^9}, 3.6165038980097713`*^9, {3.616503934121045*^9, 
+   3.6165040228444624`*^9}, {3.6165041335065374`*^9, 
+   3.6165042019163857`*^9}, {3.6165042389027066`*^9, 
+   3.6165042517315073`*^9}, {3.6165043132503605`*^9, 
+   3.6165044531639752`*^9}, {3.6165052524818087`*^9, 
+   3.6165052849053893`*^9}, {3.6165053303296537`*^9, 
+   3.6165053320172434`*^9}, {3.6165053661596613`*^9, 
+   3.6165053809729404`*^9}, {3.6165054149434776`*^9, 
+   3.6165055151049953`*^9}, {3.616506183361003*^9, 3.6165061940178137`*^9}, {
+   3.6165063178524685`*^9, 3.616506323868392*^9}, {3.6165063563388495`*^9, 
+   3.6165064225454845`*^9}, {3.6165064615475082`*^9, 3.616506551677251*^9}, {
+   3.6165065891010933`*^9, 3.616506590694928*^9}, {3.6165066379942884`*^9, 
+   3.6165069699805*^9}, {3.61650700090401*^9, 3.6165070170611095`*^9}, {
+   3.6165071620687447`*^9, 3.6165071756631937`*^9}, {3.6165072385571265`*^9, 
+   3.6165072679024496`*^9}, {3.6165073042949896`*^9, 3.616507387627467*^9}, {
+   3.6165074836693316`*^9, 3.6165075490946455`*^9}, {3.6165076282706842`*^9, 
+   3.616507663944436*^9}, {3.616507702212088*^9, 3.616507705884141*^9}, {
+   3.6165079274739227`*^9, 3.6165081291876574`*^9}, {3.61650818514373*^9, 
+   3.616508223098874*^9}, {3.616508281148782*^9, 3.616508282367589*^9}, {
+   3.616508416640286*^9, 3.6165084965038505`*^9}, {3.616508544678259*^9, 
+   3.6165086393551207`*^9}, {3.616508686638851*^9, 3.616508693764228*^9}, {
+   3.616508765486749*^9, 3.6165087806906743`*^9}, {3.6165088546945653`*^9, 
+   3.6165089487307606`*^9}, {3.6165090164843245`*^9, 
+   3.6165091061296663`*^9}, {3.61650914302223*^9, 3.6165091619607325`*^9}, {
+   3.6165092441525507`*^9, 3.6165092442306776`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{C$$ = 1, $CellContext`gr$$ = "Correntes", I$$ = 
+    400, $CellContext`L$$ = 1, $CellContext`R$$ = 10, $CellContext`t1$$ = 
+    0., $CellContext`tmax$$ = 30, $CellContext`V0$$ = 1, $CellContext`Vq0$$ = 
+    1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Dynamic[
+        Show[{
+          Switch[$CellContext`gr$$, "Tens\[ATilde]o", 
+           Show[{
+             Plot[
+              $CellContext`solucao[$CellContext`t], {$CellContext`t, 
+               0, $CellContext`tmax$$}, PlotStyle -> Thick, GridLines -> 
+              Automatic, GridLinesStyle -> Directive[Black, Dashed], Frame -> 
+              True, PlotRange -> All, ImageSize -> 0.75 I$$, 
+              AxesLabel -> {$CellContext`t, $CellContext`V}, 
+              AxesLabel -> {$CellContext`t, $CellContext`V}, 
+              PlotLegends -> {"Tens\[ATilde]o"}, PlotLabel -> 
+              Style["Tens\[ATilde]o no Circuito V(t) x t", 15]], 
+             Graphics[{Red, 
+               AbsolutePointSize[5], 
+               Point[{$CellContext`t1$$, 
+                 ReplaceAll[
+                  $CellContext`solucao[$CellContext`t], $CellContext`t -> \
+$CellContext`t1$$]}]}]}], "Correntes", 
+           Show[{
+             
+             Plot[{$CellContext`solucao[$CellContext`t]/$CellContext`R$$, C$$ 
+               Derivative[
+                1][$CellContext`solucao][$CellContext`t], \
+(-$CellContext`solucao[$CellContext`t])/$CellContext`R$$ - C$$ 
+               Derivative[
+                1][$CellContext`solucao][$CellContext`t]}, {$CellContext`t, 
+               0, $CellContext`tmax$$}, PlotStyle -> Thick, GridLines -> 
+              Automatic, GridLinesStyle -> Dashed, Frame -> True, PlotRange -> 
+              All, ImageSize -> 0.75 I$$, PlotLabel -> 
+              Style["Correntes do Circuito I(t) x t", 15], 
+              PlotLegends -> {"Resistor", "Capacitor", "Indutor"}], 
+             Graphics[{Red, 
+               AbsolutePointSize[5], 
+               Point[{$CellContext`t1$$, 
+                 
+                 ReplaceAll[$CellContext`solucao[$CellContext`t]/$CellContext`\
+R$$, $CellContext`t -> $CellContext`t1$$]}]}]}], "Energia", 
+           Show[{
+             
+             Plot[{C$$ ($CellContext`solucao[$CellContext`t]^2/
+                 2) + $CellContext`L$$ \
+(($CellContext`solucao[$CellContext`t]/$CellContext`R$$ + 
+                   C$$ Derivative[1][$CellContext`solucao][$CellContext`t])^2/
+                 2), C$$ ($CellContext`solucao[$CellContext`t]^2/
+                2), $CellContext`L$$ \
+(($CellContext`solucao[$CellContext`t]/$CellContext`R$$ + 
+                  C$$ Derivative[1][$CellContext`solucao][$CellContext`t])^2/
+                2)}, {$CellContext`t, 0, $CellContext`tmax$$}, PlotStyle -> 
+              Thick, GridLines -> Automatic, GridLinesStyle -> Dashed, Frame -> 
+              True, PlotRange -> All, ImageSize -> 0.75 I$$, PlotLabel -> 
+              Style["An\[AAcute]lise de Energia U(t)xt", 15], 
+              PlotLegends -> {"Total", "Capacitor", "Indutor"}], 
+             Graphics[{Red, 
+               AbsolutePointSize[5], 
+               Line[{{$CellContext`t1$$, 0}, {$CellContext`t1$$, 
+                  ReplaceAll[
+                  1.1 (C$$ ($CellContext`solucao[$CellContext`t]^2/
+                    2) + $CellContext`L$$ \
+(($CellContext`solucao[$CellContext`t]/$CellContext`R$$ + 
+                    C$$ Derivative[
+                    1][$CellContext`solucao][$CellContext`t])^2/
+                    2)), $CellContext`t -> $CellContext`t1$$]}}], 
+               Point[{$CellContext`t1$$, 
+                 
+                 ReplaceAll[$CellContext`L$$ \
+(($CellContext`solucao[$CellContext`t]/$CellContext`R$$ + 
+                    C$$ Derivative[
+                    1][$CellContext`solucao][$CellContext`t])^2/2) + 
+                  C$$ ($CellContext`solucao[$CellContext`t]^2/
+                    2), $CellContext`t -> $CellContext`t1$$]}]}]}]]}]]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`gr$$], "Tens\[ATilde]o", 
+       Style["Gr\[AAcute]ficos", Bold, 12]}, {
+      "Tens\[ATilde]o", "Correntes", "Energia"}}, {
+      Hold[
+       Item["Anima\[CCedilla]\[ATilde]o", Alignment -> Center]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`t1$$], 0, "Tempo (t)"}, 0, 
+      Dynamic[$CellContext`tmax$$], 0.05}, {{
+       Hold[$CellContext`t1$$], 0, "Tempo (t)"}, 0, 
+      Dynamic[$CellContext`tmax$$], 0.1}, {{
+       Hold[$CellContext`tmax$$], 30, "Tempo m\[AAcute]ximo (Tmax)"}, 10, 100,
+       1}, {
+      Hold[
+       Item["Condi\[CCedilla]\[OTilde]es Iniciais", Alignment -> Center]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`V0$$], 1, "Voltagem Inicial (V0)"}, 0, 5, 0.1}, {{
+       Hold[$CellContext`Vq0$$], 1, "Derivada Inicial (V'0)"}, 0, 5, 0.1}, {
+      Hold[
+       Item["Elementos do Circuito", Alignment -> Center]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`L$$], 1, "Indut\[AHat]ncia (L)"}, 0.01, 2, 0.01}, {{
+       Hold[C$$], 1, "Capacit\[AHat]ncia (C)"}, 0.01, 2, 0.01}, {{
+       Hold[$CellContext`R$$], 10, "Resist\[EHat]ncia (R)"}, 0.1, 50, 0.1}, {{
+       Hold[I$$], 400, "Tamanho da Imagem"}, 300, 700, 100}}, 
+    Typeset`size$$ = {400., {232., 237.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`gr$43569$$ = 0, $CellContext`t1$43570$$ = 
+    0, $CellContext`tmax$43571$$ = 0, $CellContext`V0$43572$$ = 
+    0, $CellContext`Vq0$43573$$ = 0, $CellContext`L$43574$$ = 0, C$43575$$ = 
+    0, $CellContext`R$43576$$ = 0, I$43577$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {
+       C$$ = 1, $CellContext`gr$$ = "Tens\[ATilde]o", I$$ = 
+        400, $CellContext`L$$ = 1, $CellContext`R$$ = 10, $CellContext`t1$$ = 
+        0, $CellContext`tmax$$ = 30, $CellContext`V0$$ = 
+        1, $CellContext`Vq0$$ = 1}, "ControllerVariables" :> {
+        Hold[$CellContext`gr$$, $CellContext`gr$43569$$, 0], 
+        Hold[$CellContext`t1$$, $CellContext`t1$43570$$, 0], 
+        Hold[$CellContext`tmax$$, $CellContext`tmax$43571$$, 0], 
+        Hold[$CellContext`V0$$, $CellContext`V0$43572$$, 0], 
+        Hold[$CellContext`Vq0$$, $CellContext`Vq0$43573$$, 0], 
+        Hold[$CellContext`L$$, $CellContext`L$43574$$, 0], 
+        Hold[C$$, C$43575$$, 0], 
+        Hold[$CellContext`R$$, $CellContext`R$43576$$, 0], 
+        Hold[I$$, I$43577$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`sol = 
+        DSolve[{Derivative[2][$CellContext`V][$CellContext`t] + 
+            Derivative[1][$CellContext`V][$CellContext`t]/($CellContext`R$$ 
+             C$$) + $CellContext`V[$CellContext`t]/($CellContext`L$$ C$$) == 
+           0, $CellContext`V[0] == $CellContext`V0$$, 
+           Derivative[1][$CellContext`V][
+            0] == $CellContext`Vq0$$}, $CellContext`V, $CellContext`t]; \
+$CellContext`solucao = ReplaceAll[$CellContext`V, 
+          First[$CellContext`sol]]; Show[{
+          Show[$CellContext`circuit, ImageSize -> I$$], 
+          Graphics[{
+            Text[
+             Style[
+              Row[{
+                NumberForm[
+                 N[
+                  ReplaceAll[
+                   $CellContext`solucao[$CellContext`t], $CellContext`t -> \
+$CellContext`t1$$]], {3, 2}], " V"}], 20], {365, 315}], 
+            Text[
+             NumberForm[
+              Style[
+               Row[{
+                 N[
+                  
+                  ReplaceAll[$CellContext`solucao[$CellContext`t]/$\
+CellContext`R$$, $CellContext`t -> $CellContext`t1$$]], " A"}], 15], {3, 
+              2}], {120, 215}], 
+            Text[
+             NumberForm[
+              Style[
+               Row[{
+                 N[
+                  ReplaceAll[
+                  C$$ Derivative[
+                    1][$CellContext`solucao][$CellContext`t], $CellContext`t -> \
+$CellContext`t1$$]], " A"}], 15], {3, 2}], {265, 215}], 
+            Text[
+             NumberForm[
+              Style[
+               Row[{
+                 N[
+                  
+                  ReplaceAll[(-$CellContext`solucao[$CellContext`t])/$\
+CellContext`R$$ - C$$ 
+                   Derivative[
+                    1][$CellContext`solucao][$CellContext`t], $CellContext`t -> \
+$CellContext`t1$$]], " A"}], 15], {3, 2}], {420, 215}], 
+            Text[
+             Style[
+              
+              Row[{"V''(t)+\!\(\*FractionBox[\(1\), \
+\(RC\)]\)V'(t)+\!\(\*FractionBox[\(1\), \(LC\)]\)V(t)=0", "   ", 
+                "\!\(\*SubscriptBox[\(\[Omega]\), \
+\(0\)]\)=\!\(\*SqrtBox[FractionBox[\(1\), \(LC\)]]\)=", 
+                NumberForm[
+                 N[
+                  Sqrt[1/($CellContext`L$$ C$$)]], {3, 2}], "   ", 
+                "\[Gamma] =\!\(\*FractionBox[\(1\), \(RC\)]\)= ", 
+                NumberForm[
+                 N[1/($CellContext`R$$ C$$)], {3, 2}], "    Q= ", 
+                NumberForm[
+                 N[$CellContext`R$$ Sqrt[C$$/$CellContext`L$$]], {3, 2}]}], 
+              13], {250, 400}], 
+            Text[
+             Style["Principais par\[AHat]metros do problema:", 13], {250, 
+             450}], 
+            Text[
+             Style[
+             "Simula\[CCedilla]\[ATilde]o do Circuito RLC paralelo", 20], {
+             250, 500}]}]}]), "Specifications" :> {
+        Dynamic[
+         Show[{
+           Switch[$CellContext`gr$$, "Tens\[ATilde]o", 
+            Show[{
+              Plot[
+               $CellContext`solucao[$CellContext`t], {$CellContext`t, 
+                0, $CellContext`tmax$$}, PlotStyle -> Thick, GridLines -> 
+               Automatic, GridLinesStyle -> Directive[Black, Dashed], Frame -> 
+               True, PlotRange -> All, ImageSize -> 0.75 I$$, 
+               AxesLabel -> {$CellContext`t, $CellContext`V}, 
+               AxesLabel -> {$CellContext`t, $CellContext`V}, 
+               PlotLegends -> {"Tens\[ATilde]o"}, PlotLabel -> 
+               Style["Tens\[ATilde]o no Circuito V(t) x t", 15]], 
+              Graphics[{Red, 
+                AbsolutePointSize[5], 
+                Point[{$CellContext`t1$$, 
+                  ReplaceAll[
+                   $CellContext`solucao[$CellContext`t], $CellContext`t -> \
+$CellContext`t1$$]}]}]}], "Correntes", 
+            Show[{
+              
+              Plot[{$CellContext`solucao[$CellContext`t]/$CellContext`R$$, 
+                C$$ Derivative[
+                 1][$CellContext`solucao][$CellContext`t], \
+(-$CellContext`solucao[$CellContext`t])/$CellContext`R$$ - C$$ 
+                Derivative[
+                 1][$CellContext`solucao][$CellContext`t]}, {$CellContext`t, 
+                0, $CellContext`tmax$$}, PlotStyle -> Thick, GridLines -> 
+               Automatic, GridLinesStyle -> Dashed, Frame -> True, PlotRange -> 
+               All, ImageSize -> 0.75 I$$, PlotLabel -> 
+               Style["Correntes do Circuito I(t) x t", 15], 
+               PlotLegends -> {"Resistor", "Capacitor", "Indutor"}], 
+              Graphics[{Red, 
+                AbsolutePointSize[5], 
+                Point[{$CellContext`t1$$, 
+                  
+                  ReplaceAll[$CellContext`solucao[$CellContext`t]/$\
+CellContext`R$$, $CellContext`t -> $CellContext`t1$$]}]}]}], "Energia", 
+            Show[{
+              
+              Plot[{C$$ ($CellContext`solucao[$CellContext`t]^2/
+                  2) + $CellContext`L$$ \
+(($CellContext`solucao[$CellContext`t]/$CellContext`R$$ + 
+                    C$$ Derivative[
+                    1][$CellContext`solucao][$CellContext`t])^2/2), 
+                C$$ ($CellContext`solucao[$CellContext`t]^2/
+                 2), $CellContext`L$$ \
+(($CellContext`solucao[$CellContext`t]/$CellContext`R$$ + 
+                   C$$ Derivative[1][$CellContext`solucao][$CellContext`t])^2/
+                 2)}, {$CellContext`t, 0, $CellContext`tmax$$}, PlotStyle -> 
+               Thick, GridLines -> Automatic, GridLinesStyle -> Dashed, Frame -> 
+               True, PlotRange -> All, ImageSize -> 0.75 I$$, PlotLabel -> 
+               Style["An\[AAcute]lise de Energia U(t)xt", 15], 
+               PlotLegends -> {"Total", "Capacitor", "Indutor"}], 
+              Graphics[{Red, 
+                AbsolutePointSize[5], 
+                Line[{{$CellContext`t1$$, 0}, {$CellContext`t1$$, 
+                   ReplaceAll[
+                   1.1 (C$$ ($CellContext`solucao[$CellContext`t]^2/
+                    
+                    2) + $CellContext`L$$ \
+(($CellContext`solucao[$CellContext`t]/$CellContext`R$$ + 
+                    C$$ Derivative[
+                    1][$CellContext`solucao][$CellContext`t])^2/
+                    2)), $CellContext`t -> $CellContext`t1$$]}}], 
+                Point[{$CellContext`t1$$, 
+                  
+                  ReplaceAll[$CellContext`L$$ \
+(($CellContext`solucao[$CellContext`t]/$CellContext`R$$ + 
+                    C$$ Derivative[
+                    1][$CellContext`solucao][$CellContext`t])^2/2) + 
+                   C$$ ($CellContext`solucao[$CellContext`t]^2/
+                    2), $CellContext`t -> $CellContext`t1$$]}]}]}]]}]], \
+{{$CellContext`gr$$, "Tens\[ATilde]o", 
+          Style["Gr\[AAcute]ficos", Bold, 12]}, {
+         "Tens\[ATilde]o", "Correntes", "Energia"}}, Delimiter, 
+        Item[
+        "Anima\[CCedilla]\[ATilde]o", Alignment -> 
+         Center], {{$CellContext`t1$$, 0, "Tempo (t)"}, 0, 
+         Dynamic[$CellContext`tmax$$], 0.05, ControlType -> Animator, 
+         DisplayAllSteps -> True, 
+         AppearanceElements -> {
+          "PlayPauseButton", "DirectionButton", "ResetButton", 
+           "StepLeftButton", "StepRightButton"}, AnimationRunning -> False, 
+         AnimationRate -> 10}, {{$CellContext`t1$$, 0, "Tempo (t)"}, 0, 
+         Dynamic[$CellContext`tmax$$], 0.1, ImageSize -> Small, Appearance -> 
+         "Labeled"}, {{$CellContext`tmax$$, 30, 
+          "Tempo m\[AAcute]ximo (Tmax)"}, 10, 100, 1, ImageSize -> Small, 
+         Appearance -> "Labeled"}, Delimiter, 
+        Item[
+        "Condi\[CCedilla]\[OTilde]es Iniciais", Alignment -> 
+         Center], {{$CellContext`V0$$, 1, "Voltagem Inicial (V0)"}, 0, 5, 0.1,
+          ImageSize -> Small, Appearance -> 
+         "Labeled"}, {{$CellContext`Vq0$$, 1, "Derivada Inicial (V'0)"}, 0, 5,
+          0.1, ImageSize -> Small, Appearance -> "Labeled"}, Delimiter, 
+        Item[
+        "Elementos do Circuito", Alignment -> 
+         Center], {{$CellContext`L$$, 1, "Indut\[AHat]ncia (L)"}, 0.01, 2, 
+         0.01, ImageSize -> Small, Appearance -> "Labeled"}, {{
+         C$$, 1, "Capacit\[AHat]ncia (C)"}, 0.01, 2, 0.01, ImageSize -> Small,
+          Appearance -> 
+         "Labeled"}, {{$CellContext`R$$, 10, "Resist\[EHat]ncia (R)"}, 0.1, 
+         50, 0.1, ImageSize -> Small, Appearance -> "Labeled"}, 
+        Delimiter, {{I$$, 400, "Tamanho da Imagem"}, 300, 700, 100, ImageSize -> 
+         Small, Appearance -> "Labeled"}}, 
+      "Options" :> {ControlPlacement -> Right, SynchronousUpdating -> True}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{842., {296., 301.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.616503263632654*^9, {3.616503496316768*^9, 3.6165035223025107`*^9}, 
+   3.616503554366702*^9, {3.616503604556841*^9, 3.6165036469653215`*^9}, 
+   3.6165037366106634`*^9, 3.6165037953012443`*^9, {3.616503842131838*^9, 
+   3.616503863554834*^9}, 3.6165038997911153`*^9, 3.616503949278098*^9, {
+   3.6165039927178774`*^9, 3.6165040149221706`*^9}, 3.616504058565095*^9, 
+   3.61650420377586*^9, {3.616504253528475*^9, 3.6165042748108377`*^9}, {
+   3.616504378300658*^9, 3.616504393238949*^9}, 3.616504423709296*^9, {
+   3.6165052536693697`*^9, 3.616505276436203*^9}, 3.6165053331110487`*^9, {
+   3.6165053700192394`*^9, 3.6165055178395176`*^9}, {3.6165063104145613`*^9, 
+   3.6165063256028605`*^9}, {3.6165063932939262`*^9, 3.616506401153715*^9}, 
+   3.6165065541148777`*^9, {3.6165066187745285`*^9, 3.6165066583234835`*^9}, {
+   3.6165067138107843`*^9, 3.61650676115702*^9}, {3.6165068130659995`*^9, 
+   3.6165068294262342`*^9}, {3.6165068993674154`*^9, 3.616506970902424*^9}, 
+   3.6165070195456085`*^9, 3.616507135942356*^9, {3.616507243932411*^9, 
+   3.616507271340109*^9}, {3.6165073676264195`*^9, 3.6165073886118956`*^9}, 
+   3.616507433145488*^9, {3.6165074964825087`*^9, 3.6165075046391835`*^9}, {
+   3.616507536078342*^9, 3.616507550063446*^9}, {3.6165075949720583`*^9, 
+   3.616507599081651*^9}, {3.616507650068713*^9, 3.616507665225755*^9}, 
+   3.6165077075873585`*^9, 3.616507907160355*^9, 3.6165079783672256`*^9, 
+   3.6165080483396597`*^9, 3.616508131234643*^9, {3.616508195300513*^9, 
+   3.61650822439579*^9}, {3.616508435875668*^9, 3.616508478284144*^9}, 
+   3.6165085643511696`*^9, {3.616508620385374*^9, 3.6165086424802866`*^9}, 
+   3.6165087840189805`*^9, 3.616508886039966*^9, {3.6165089229481635`*^9, 
+   3.616508950387101*^9}, 3.6165090276880417`*^9, 3.616509063924327*^9, 
+   3.616509109332966*^9, 3.6165091633358006`*^9, 3.6165092462932873`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{970, 605},
+WindowMargins->{{50, Automatic}, {Automatic, 4}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 657, 9, 90, "Title"],
+Cell[1239, 33, 316, 7, 71, "Subsection"],
+Cell[CellGroupData[{
+Cell[1580, 44, 280, 7, 64, "Subtitle"],
+Cell[CellGroupData[{
+Cell[1885, 55, 809, 22, 152, "Input"],
+Cell[2697, 79, 4483, 62, 31, "Output"]
+}, Open  ]],
+Cell[7195, 144, 15661, 261, 122, "Input"],
+Cell[CellGroupData[{
+Cell[22881, 409, 28346, 607, 1491, "Input"],
+Cell[51230, 1018, 17744, 346, 646, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

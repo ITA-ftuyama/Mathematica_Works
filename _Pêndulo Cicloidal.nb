@@ -1,0 +1,1547 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     65787,       1539]
+NotebookOptionsPosition[     63998,       1478]
+NotebookOutlinePosition[     64668,       1504]
+CellTagsIndexPosition[     64625,       1501]
+WindowTitle->Cycloidal Pendulum - Source
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Cycloidal Pendulum", "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False,
+ CellChangeTimes->{{3.6045813421041884`*^9, 3.6045813631521597`*^9}, 
+   3.6045814425000486`*^9},
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1: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
+FP/69esnAAAAAAAAAAAAwM74B4thROM=
+   "], {{0, 0}, {1800, 25}}, {0, 255},
+   ColorFunction->RGBColor],
+  ImageSize->{1800, 25},
+  PlotRange->{{0, 1800}, {0, 25}}]], "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False,
+ CellChangeTimes->{3.6045813560580397`*^9, 3.6045814509067183`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"cycloid", "[", "s_", "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"s", "-", 
+     RowBox[{"Sin", "[", "s", "]"}], "-", "\[Pi]"}], ",", 
+    RowBox[{
+     RowBox[{"-", "1"}], "+", 
+     RowBox[{"Cos", "[", "s", "]"}]}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"evolute", "[", "s_", "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"s", "+", 
+     RowBox[{"Sin", "[", "s", "]"}], "-", "\[Pi]"}], ",", 
+    RowBox[{"2", " ", 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", 
+       RowBox[{"s", "/", "2"}], "]"}], "2"]}]}], "}"}]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.530535397828125*^9, 3.53053540253125*^9}, {
+  3.53053559015625*^9, 3.53053562028125*^9}, {3.6045791875017414`*^9, 
+  3.6045792111279464`*^9}, {3.6045792561146684`*^9, 3.6045792680059137`*^9}},
+ CellID->638803233],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"g", "=", "9.81"}], ",", "sol", ",", "period", ",", "sw"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"sol", "[", "s0_", "]"}], ":=", 
+       RowBox[{
+        RowBox[{"NDSolve", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"Sin", "[", 
+                RowBox[{"s", "[", "t", "]"}], "]"}], " ", 
+               RowBox[{"(", 
+                RowBox[{"g", "-", 
+                 SuperscriptBox[
+                  RowBox[{
+                   SuperscriptBox["s", "\[Prime]",
+                    MultilineFunction->None], "[", "t", "]"}], "2"]}], 
+                ")"}]}], "+", 
+              RowBox[{"2", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "1"}], "+", 
+                 RowBox[{"Cos", "[", 
+                  RowBox[{"s", "[", "t", "]"}], "]"}]}], ")"}], " ", 
+               RowBox[{
+                SuperscriptBox["s", "\[Prime]\[Prime]",
+                 MultilineFunction->None], "[", "t", "]"}]}]}], "\[Equal]", 
+             "0"}], ",", 
+            RowBox[{
+             RowBox[{"s", "[", "\[Epsilon]", "]"}], "\[Equal]", "s0"}], ",", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox["s", "\[Prime]",
+               MultilineFunction->None], "[", "\[Epsilon]", "]"}], "\[Equal]",
+              "0"}]}], "}"}], ",", "s", ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "0", ",", "tMax"}], "}"}], ",", 
+          RowBox[{"AccuracyGoal", "\[Rule]", "12"}], ",", 
+          RowBox[{"MaxSteps", "\[Rule]", "\[Infinity]"}]}], "]"}], 
+        "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"period", "[", "s0_", "]"}], ":=", 
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", "end", "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"NDSolve", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"s", "[", "t", "]"}], "]"}], " ", 
+                 RowBox[{"(", 
+                  RowBox[{"g", "-", 
+                   SuperscriptBox[
+                    RowBox[{
+                    SuperscriptBox["s", "\[Prime]",
+                    MultilineFunction->None], "[", "t", "]"}], "2"]}], 
+                  ")"}]}], "+", 
+                RowBox[{"2", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", 
+                   RowBox[{"Cos", "[", 
+                    RowBox[{"s", "[", "t", "]"}], "]"}]}], ")"}], " ", 
+                 RowBox[{
+                  SuperscriptBox["s", "\[Prime]\[Prime]",
+                   MultilineFunction->None], "[", "t", "]"}]}]}], "\[Equal]", 
+               "0"}], ",", 
+              RowBox[{
+               RowBox[{"s", "[", "\[Epsilon]", "]"}], "\[Equal]", "s0"}], ",", 
+              RowBox[{
+               RowBox[{
+                SuperscriptBox["s", "\[Prime]",
+                 MultilineFunction->None], "[", "\[Epsilon]", "]"}], 
+               "\[Equal]", "0"}]}], "}"}], ",", "s", ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", "0", ",", "10"}], "}"}], ",", 
+            RowBox[{"AccuracyGoal", "\[Rule]", "12"}], ",", 
+            RowBox[{"Method", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<EventLocator\>\"", ",", " ", 
+               RowBox[{"\"\<Event\>\"", "\[Rule]", 
+                RowBox[{
+                 RowBox[{"s", "[", "t", "]"}], "-", "\[Pi]"}]}], ",", 
+               RowBox[{"\"\<EventAction\>\"", "\[RuleDelayed]", 
+                RowBox[{"Throw", "[", 
+                 RowBox[{
+                  RowBox[{"end", "=", "t"}], ",", " ", 
+                  "\"\<StopIntegration\>\""}], "]"}]}]}], "}"}]}]}], "]"}], 
+          ";", 
+          RowBox[{"4", "end"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"Nbolas", "==", "4"}], ",", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"sw", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s0", "]"}]}]}], ";", " ", 
+           RowBox[{"swx", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s1", "]"}]}]}], ";", " ", 
+           RowBox[{"swy", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s2", "]"}]}]}], ";", 
+           RowBox[{"swz", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s3", "]"}]}]}], ";"}], "}"}]}], "]"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"Nbolas", "\[Equal]", "3"}], ",", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"sw", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s0", "]"}]}]}], ";", " ", 
+           RowBox[{"swx", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s1", "]"}]}]}], ";", " ", 
+           RowBox[{"swy", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s2", "]"}]}]}], ";"}], "}"}]}], "]"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"Nbolas", "\[Equal]", "2"}], ",", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"sw", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s0", "]"}]}]}], ";", " ", 
+           RowBox[{"swx", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s1", "]"}]}]}], ";"}], "}"}]}], "]"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"Nbolas", "\[Equal]", "1"}], ",", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"sw", "=", 
+            RowBox[{
+             RowBox[{"s", "[", "time", "]"}], "/.", 
+             RowBox[{"sol", "[", "s0", "]"}]}]}], ";"}], "}"}]}], "]"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"Show", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"ParametricPlot", "[", 
+         RowBox[{
+          RowBox[{"Evaluate", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"cycloid", "[", "t", "]"}], ",", 
+             RowBox[{"evolute", "[", "t", "]"}]}], "}"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "0", ",", 
+            RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+          RowBox[{"PlotLabel", "\[Rule]", 
+           RowBox[{"\"\<Per\[IAcute]odo: \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"period", "[", "s0", "]"}], "]"}]}]}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"Dashed", ",", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"Thick", ",", " ", "Orange"}], "]"}]}], "}"}]}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "3.3"}], ",", "3.3"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"2.05", ",", 
+               RowBox[{"-", "2.15"}]}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+          RowBox[{"Ticks", "\[Rule]", "None"}], ",", 
+          RowBox[{"AxesStyle", "\[Rule]", "DotDashed"}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"600", ",", "400"}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Epilog", "\[Rule]", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"Nbolas", "==", "4"}], ",", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "sw", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "sw", "]"}], ",", 
+                    RowBox[{"evolute", "[", "sw", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "swx", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "swx", "]"}], ",", 
+                    RowBox[{"evolute", "[", "swx", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "swy", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "swy", "]"}], ",", 
+                    RowBox[{"evolute", "[", "swy", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "swz", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "swz", "]"}], ",", 
+                    RowBox[{"evolute", "[", "swz", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a2", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "swx", "]"}], "]"}]}], "}"}], ",",
+                  " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a3", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "swy", "]"}], "]"}]}], "}"}], ",",
+                  "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a4", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "swz", "]"}], "]"}]}], "}"}], ",",
+                  " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a0", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "sw", "]"}], "]"}]}], "}"}]}], 
+                "\[IndentingNewLine]", "}"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"Nbolas", "\[Equal]", "3"}], ",", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "sw", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "sw", "]"}], ",", 
+                    RowBox[{"evolute", "[", "sw", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "swx", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "swx", "]"}], ",", 
+                    RowBox[{"evolute", "[", "swx", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "swy", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "swy", "]"}], ",", 
+                    RowBox[{"evolute", "[", "swy", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a2", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "swx", "]"}], "]"}]}], "}"}], ",",
+                  " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a3", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "swy", "]"}], "]"}]}], "}"}], ",",
+                  "\[IndentingNewLine]", " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a0", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "sw", "]"}], "]"}]}], "}"}]}], 
+                "\[IndentingNewLine]", "}"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"Nbolas", "\[Equal]", "2"}], ",", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "sw", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "sw", "]"}], ",", 
+                    RowBox[{"evolute", "[", "sw", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "swx", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "swx", "]"}], ",", 
+                    RowBox[{"evolute", "[", "swx", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a2", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "swx", "]"}], "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a0", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "sw", "]"}], "]"}]}], "}"}]}], 
+                "\[IndentingNewLine]", "}"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"Nbolas", "\[Equal]", "1"}], ",", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"Thick", ",", "Blue", ",", 
+                   RowBox[{
+                    RowBox[{"ParametricPlot", "[", 
+                    RowBox[{
+                    RowBox[{"evolute", "[", "s", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"s", ",", "sw", ",", "\[Pi]"}], "}"}]}], "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                   ",", "Green", ",", 
+                   RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"cycloid", "[", "sw", "]"}], ",", 
+                    RowBox[{"evolute", "[", "sw", "]"}]}], "}"}], "]"}]}], 
+                  "}"}], ",", "\[IndentingNewLine]", " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".04", "]"}], ",", "a0", ",", 
+                   RowBox[{"Point", "[", 
+                    RowBox[{"cycloid", "[", "sw", "]"}], "]"}]}], "}"}]}], 
+                "\[IndentingNewLine]", "}"}]}], "]"}]}], 
+            "\[IndentingNewLine]", "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+        "}"}], "]"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Row", "[", 
+    RowBox[{"{", 
+     RowBox[{"Control", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "time", ",", "0", ",", "\"\<Anima\[CCedilla]\[ATilde]o\>\""}], "}"}],
+         ",", "0", ",", "tMax", ",", "speed", ",", "Trigger", ",", 
+        RowBox[{"DisplayAllSteps", "\[Rule]", "True"}], ",", 
+        RowBox[{"AppearanceElements", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<StepLeftButton\>\"", ",", "\"\<StepRightButton\>\"", ",", 
+           "\"\<PlayPauseButton\>\"", ",", "\"\<ResetButton\>\""}], "}"}]}]}],
+        "}"}], "]"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"tMax", ",", "100"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Epsilon]", ",", "1*^-4"}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "speed", ",", ".01", ",", 
+       "\"\<Velocidade Anima\[CCedilla]\[ATilde]o\>\""}], "}"}], ",", ".005", 
+     ",", ".02", ",", ".005", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Nbolas", ",", "2", ",", "\"\<N\.ba Bolas\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Row", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a0", ",", "Red", ",", "\"\<Cor1\>\""}], "}"}], ",", 
+         "ColorSlider", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a2", ",", "Black", ",", "\"\<Cor2\>\""}], "}"}], ",", 
+         "ColorSlider", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a3", ",", "Blue", ",", "\"\<Cor3\>\""}], "}"}], ",", 
+         "ColorSlider", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a4", ",", "Green", ",", "\"\<Cor4\>\""}], "}"}], ",", 
+         "ColorSlider", ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Small"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}]}], "\[IndentingNewLine]", "}"}], 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Row", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s0", ",", "1.5", ",", "\"\<\[AHat]ngulo 1\>\""}], "}"}], 
+         ",", 
+         RowBox[{"\[Epsilon]", "/", "1.8"}], ",", 
+         RowBox[{"\[Pi]", "-", "\[Epsilon]"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s1", ",", "2", ",", "\"\<\[AHat]ngulo 2\>\""}], "}"}], ",", 
+         RowBox[{"\[Epsilon]", "/", "1.8"}], ",", 
+         RowBox[{"\[Pi]", "-", "\[Epsilon]"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s2", ",", "2.5", ",", "\"\<\[AHat]ngulo 3\>\""}], "}"}], 
+         ",", 
+         RowBox[{"\[Epsilon]", "/", "1.8"}], ",", 
+         RowBox[{"\[Pi]", "-", "\[Epsilon]"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s3", ",", "3", ",", "\"\<\[AHat]ngulo 4\>\""}], "}"}], ",", 
+         RowBox[{"\[Epsilon]", "/", "1.8"}], ",", 
+         RowBox[{"\[Pi]", "-", "\[Epsilon]"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "20", "]"}]}], "\[IndentingNewLine]", "}"}], 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"TrackedSymbols", "\[RuleDelayed]", "Manipulate"}], ",", 
+   RowBox[{"SynchronousUpdating", "\[Rule]", "False"}], ",", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.530532184484375*^9, {3.5305337035*^9, 3.530533756546875*^9}, {
+   3.530533802015625*^9, 3.53053380853125*^9}, {3.530533841078125*^9, 
+   3.530533953921875*^9}, {3.530534007203125*^9, 3.530534105046875*^9}, {
+   3.530534174890625*^9, 3.530534201953125*^9}, {3.530534236640625*^9, 
+   3.53053423740625*^9}, {3.53053429725*^9, 3.530534305046875*^9}, {
+   3.53053435096875*^9, 3.530534353796875*^9}, {3.530534473125*^9, 
+   3.530534476015625*^9}, {3.530534529046875*^9, 3.53053465903125*^9}, {
+   3.5305347193125*^9, 3.53053476340625*^9}, 3.530535331484375*^9, {
+   3.5305353700625*^9, 3.53053538840625*^9}, {3.53053557646875*^9, 
+   3.5305355844375*^9}, {3.530535879421875*^9, 3.530535887625*^9}, {
+   3.530535919390625*^9, 3.530535939453125*^9}, {3.53053628390625*^9, 
+   3.53053636703125*^9}, {3.5305460451875*^9, 3.5305461206875*^9}, {
+   3.53054623525*^9, 3.5305462383125*^9}, {3.53054627121875*^9, 
+   3.53054629459375*^9}, 3.530546347984375*^9, {3.530546668859375*^9, 
+   3.530546750453125*^9}, {3.53054681028125*^9, 3.5305468545*^9}, {
+   3.53054689621875*^9, 3.53054689646875*^9}, {3.53054693640625*^9, 
+   3.53054697478125*^9}, {3.53054711440625*^9, 3.530547123578125*^9}, {
+   3.530547169640625*^9, 3.5305471790625*^9}, 3.53054732253125*^9, {
+   3.530547382421875*^9, 3.530547455234375*^9}, {3.530547495421875*^9, 
+   3.5305475476875*^9}, {3.530547588890625*^9, 3.530547589921875*^9}, {
+   3.530547659828125*^9, 3.530547735390625*^9}, {3.5305477666875*^9, 
+   3.5305478331875*^9}, {3.53054798371875*^9, 3.530548060359375*^9}, 
+   3.530548348203125*^9, {3.530548481546875*^9, 3.530548486046875*^9}, {
+   3.5305485354375*^9, 3.53054861003125*^9}, {3.530622699453125*^9, 
+   3.53062272040625*^9}, {3.530622857828125*^9, 3.530622864515625*^9}, 
+   3.530623001796875*^9, {3.53062305009375*^9, 3.530623056265625*^9}, 
+   3.530623100359375*^9, {3.5306231540625*^9, 3.530623352765625*^9}, {
+   3.530623414515625*^9, 3.530623432*^9}, {3.5306236563125*^9, 
+   3.53062373675*^9}, {3.53062381225*^9, 3.53062381478125*^9}, {
+   3.530623861296875*^9, 3.53062388075*^9}, {3.5306239185*^9, 
+   3.530623945296875*^9}, {3.53062398428125*^9, 3.530623984546875*^9}, {
+   3.53062403009375*^9, 3.53062403990625*^9}, {3.53062410340625*^9, 
+   3.530624224671875*^9}, {3.530624278421875*^9, 3.53062437875*^9}, {
+   3.530624444796875*^9, 3.530624480703125*^9}, {3.530624536171875*^9, 
+   3.53062455165625*^9}, {3.53062458953125*^9, 3.53062467340625*^9}, {
+   3.530624732625*^9, 3.5306247335625*^9}, {3.53063390815625*^9, 
+   3.530634033859375*^9}, {3.53068455540625*^9, 3.530684582921875*^9}, {
+   3.53068465409375*^9, 3.530684668828125*^9}, {3.530684707015625*^9, 
+   3.530684708*^9}, {3.53068475625*^9, 3.53068477746875*^9}, {
+   3.530684809390625*^9, 3.530684910125*^9}, {3.530684950921875*^9, 
+   3.5306849841875*^9}, {3.53068502959375*^9, 3.53068506096875*^9}, 
+   3.530685116703125*^9, {3.530685170375*^9, 3.5306851840625*^9}, {
+   3.530685238203125*^9, 3.530685269296875*^9}, {3.530685303609375*^9, 
+   3.53068533325*^9}, {3.530685448765625*^9, 3.5306854496875*^9}, {
+   3.530685480203125*^9, 3.530685524015625*^9}, {3.53068557428125*^9, 
+   3.530685603734375*^9}, {3.530685674671875*^9, 3.530685693390625*^9}, {
+   3.530685801171875*^9, 3.5306858284375*^9}, {3.530685890921875*^9, 
+   3.530685895*^9}, {3.604576586104373*^9, 3.604576632294284*^9}, {
+   3.604576683062558*^9, 3.604576791177576*^9}, {3.6045768751194515`*^9, 
+   3.6045768897139654`*^9}, {3.6045769684055686`*^9, 
+   3.6045769957351203`*^9}, {3.6045770597384567`*^9, 
+   3.6045770708484163`*^9}, {3.6045771477899303`*^9, 3.6045771932766743`*^9}, 
+   3.604577227231574*^9, {3.6045773273305416`*^9, 3.60457736777015*^9}, {
+   3.6045774043345594`*^9, 3.604577404584573*^9}, {3.6045774882920666`*^9, 
+   3.60457751746546*^9}, {3.604577558701988*^9, 3.604577592656888*^9}, {
+   3.6045776360028987`*^9, 3.6045778478576975`*^9}, {3.6045779330496407`*^9, 
+   3.6045780234918585`*^9}, {3.60457809946497*^9, 3.604578420809863*^9}, {
+   3.604578455577302*^9, 3.6045784593900013`*^9}, {3.604578522143274*^9, 
+   3.6045785356283474`*^9}, {3.6045785665674667`*^9, 
+   3.6045785950689483`*^9}, {3.6045786567127895`*^9, 3.604578660869282*^9}, {
+   3.604578694339752*^9, 3.6045788160804787`*^9}, 3.6045788516448407`*^9, {
+   3.6045789516456604`*^9, 3.604579013508269*^9}, {3.6045791482340403`*^9, 
+   3.604579181251388*^9}, 3.6045792759125834`*^9, {3.604579379558608*^9, 
+   3.6045793875121484`*^9}, {3.6045795089091125`*^9, 
+   3.6045795244880495`*^9}, {3.604579645869382*^9, 3.604579693199996*^9}, {
+   3.6045797771731067`*^9, 3.604579806830909*^9}, {3.6045799284584246`*^9, 
+   3.604579957397435*^9}, {3.6045799892272215`*^9, 3.6045800057280817`*^9}, {
+   3.6045800575276594`*^9, 3.604580230880453*^9}, {3.6045802741014547`*^9, 
+   3.6045802840551023`*^9}, {3.6045803803664875`*^9, 
+   3.6045804442135687`*^9}, {3.604580476402753*^9, 3.6045805187799654`*^9}, {
+   3.6045805709076777`*^9, 3.6045805991279*^9}, {3.604580649849303*^9, 
+   3.604580855610031*^9}, {3.604580907987764*^9, 3.6045810719650717`*^9}, {
+   3.6045811332807693`*^9, 3.604581145656417*^9}, {3.604581198784184*^9, 
+   3.604581307321102*^9}, {3.605716953332095*^9, 3.6057169607495008`*^9}, {
+   3.6057169944253116`*^9, 3.60571700126367*^9}, {3.6057170729068794`*^9, 
+   3.6057172701942987`*^9}, {3.605717350021511*^9, 3.6057173635731354`*^9}, {
+   3.605717412803916*^9, 3.605717437249755*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a0$$ = RGBColor[
+    1, 0, 0], $CellContext`a2$$ = GrayLevel[0], $CellContext`a3$$ = RGBColor[
+    0, 0, 1], $CellContext`a4$$ = RGBColor[0, 1, 0], $CellContext`Nbolas$$ = 
+    2, $CellContext`s0$$ = 2.6231555324141436`, $CellContext`s1$$ = 
+    1.288044765749593, $CellContext`s2$$ = 2.5, $CellContext`s3$$ = 
+    3, $CellContext`speed$$ = 0.005, $CellContext`time$$ = 
+    0., $CellContext`tMax$$ = 100, $CellContext`\[Epsilon]$$ = Rational[
+    1, 10000], Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`time$$], 0, "Anima\[CCedilla]\[ATilde]o"}, 0, 
+      Dynamic[$CellContext`tMax$$], 
+      Dynamic[$CellContext`speed$$]}, {
+      Hold[
+       Row[{
+         Manipulate`Place[1]}]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`tMax$$], 100}}, {{
+       Hold[$CellContext`\[Epsilon]$$], 
+       Rational[1, 10000]}}, {{
+       Hold[$CellContext`speed$$], 0.01, 
+       "Velocidade Anima\[CCedilla]\[ATilde]o"}, 0.005, 0.02, 0.005}, {{
+       Hold[$CellContext`Nbolas$$], 2, "N\.ba Bolas"}, {1, 2, 3, 4}}, {{
+       Hold[$CellContext`a0$$], 
+       RGBColor[1, 0, 0], "Cor1"}, 
+      GrayLevel[0.5]}, {{
+       Hold[$CellContext`a2$$], 
+       GrayLevel[0], "Cor2"}, 
+      GrayLevel[0.5]}, {{
+       Hold[$CellContext`a3$$], 
+       RGBColor[0, 0, 1], "Cor3"}, 
+      GrayLevel[0.5]}, {{
+       Hold[$CellContext`a4$$], 
+       RGBColor[0, 1, 0], "Cor4"}, 
+      GrayLevel[0.5]}, {
+      Hold[
+       Row[{
+         Manipulate`Place[2], 
+         Spacer[20], 
+         Manipulate`Place[3], 
+         Spacer[20], 
+         Manipulate`Place[4], 
+         Spacer[20], 
+         Manipulate`Place[5], 
+         Spacer[20]}]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`s0$$], 1.5, "amplitude 1"}, 
+      Dynamic[$CellContext`\[Epsilon]$$/1.8], 
+      Dynamic[Pi - $CellContext`\[Epsilon]$$]}, {{
+       Hold[$CellContext`s1$$], 2, "amplitude 2"}, 
+      Dynamic[$CellContext`\[Epsilon]$$/1.8], 
+      Dynamic[Pi - $CellContext`\[Epsilon]$$]}, {{
+       Hold[$CellContext`s2$$], 2.5, "amplitude 3"}, 
+      Dynamic[$CellContext`\[Epsilon]$$/1.8], 
+      Dynamic[Pi - $CellContext`\[Epsilon]$$]}, {{
+       Hold[$CellContext`s3$$], 3, "amplitude 4"}, 
+      Dynamic[$CellContext`\[Epsilon]$$/1.8], 
+      Dynamic[Pi - $CellContext`\[Epsilon]$$]}, {
+      Hold[
+       Row[{
+         Manipulate`Place[6], 
+         Spacer[20], 
+         Manipulate`Place[7], 
+         Spacer[20], 
+         Manipulate`Place[8], 
+         Spacer[20], 
+         Manipulate`Place[9], 
+         Spacer[20]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+    Typeset`size$$ = {540., {178., 182.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`time$9187$$ = 0, $CellContext`speed$9188$$ = 
+    0, $CellContext`Nbolas$9189$$ = 0, $CellContext`s0$9190$$ = 
+    0, $CellContext`s1$9191$$ = 0, $CellContext`s2$9192$$ = 
+    0, $CellContext`s3$9193$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`a0$$ = 
+        RGBColor[1, 0, 0], $CellContext`a2$$ = 
+        GrayLevel[0], $CellContext`a3$$ = 
+        RGBColor[0, 0, 1], $CellContext`a4$$ = 
+        RGBColor[0, 1, 0], $CellContext`Nbolas$$ = 2, $CellContext`s0$$ = 
+        1.5, $CellContext`s1$$ = 2, $CellContext`s2$$ = 
+        2.5, $CellContext`s3$$ = 3, $CellContext`speed$$ = 
+        0.01, $CellContext`time$$ = 0, $CellContext`tMax$$ = 
+        100, $CellContext`\[Epsilon]$$ = Rational[1, 10000]}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`time$$, $CellContext`time$9187$$, 0], 
+        Hold[$CellContext`speed$$, $CellContext`speed$9188$$, 0], 
+        Hold[$CellContext`Nbolas$$, $CellContext`Nbolas$9189$$, 0], 
+        Hold[$CellContext`s0$$, $CellContext`s0$9190$$, 0], 
+        Hold[$CellContext`s1$$, $CellContext`s1$9191$$, 0], 
+        Hold[$CellContext`s2$$, $CellContext`s2$9192$$, 0], 
+        Hold[$CellContext`s3$$, $CellContext`s3$9193$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`g$ = 
+         9.81, $CellContext`sol$, $CellContext`period$, $CellContext`sw$}, \
+$CellContext`sol$[
+           Pattern[$CellContext`s0$, 
+            Blank[]]] := Part[
+           NDSolve[{Sin[
+                 $CellContext`s[$CellContext`t]] ($CellContext`g$ - 
+                Derivative[1][$CellContext`s][$CellContext`t]^2) + 2 (-1 + Cos[
+                  $CellContext`s[$CellContext`t]]) 
+               Derivative[2][$CellContext`s][$CellContext`t] == 
+             0, $CellContext`s[$CellContext`\[Epsilon]$$] == $CellContext`s0$,
+              Derivative[1][$CellContext`s][$CellContext`\[Epsilon]$$] == 
+             0}, $CellContext`s, {$CellContext`t, 0, $CellContext`tMax$$}, 
+            AccuracyGoal -> 12, MaxSteps -> Infinity], 
+           1]; $CellContext`period$[
+           Pattern[$CellContext`s0$, 
+            Blank[]]] := Module[{$CellContext`end$}, NDSolve[{Sin[
+                  $CellContext`s[$CellContext`t]] ($CellContext`g$ - 
+                 Derivative[1][$CellContext`s][$CellContext`t]^2) + 
+               2 (-1 + Cos[
+                   $CellContext`s[$CellContext`t]]) 
+                Derivative[2][$CellContext`s][$CellContext`t] == 
+              0, $CellContext`s[$CellContext`\[Epsilon]$$] == \
+$CellContext`s0$, Derivative[1][$CellContext`s][$CellContext`\[Epsilon]$$] == 
+              0}, $CellContext`s, {$CellContext`t, 0, 10}, AccuracyGoal -> 12,
+              Method -> {
+              "EventLocator", "Event" -> $CellContext`s[$CellContext`t] - Pi, 
+               "EventAction" :> 
+               Throw[$CellContext`end$ = $CellContext`t, "StopIntegration"]}]; 
+           4 $CellContext`end$]; 
+        If[$CellContext`Nbolas$$ == 4, {$CellContext`sw$ = ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s0$$]]; $CellContext`swx = 
+             ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s1$$]]; $CellContext`swy = 
+             ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s2$$]]; $CellContext`swz = 
+             ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s3$$]]; Null}] 
+         If[$CellContext`Nbolas$$ == 3, {$CellContext`sw$ = ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s0$$]]; $CellContext`swx = 
+             ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s1$$]]; $CellContext`swy = 
+             ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s2$$]]; Null}] 
+         If[$CellContext`Nbolas$$ == 2, {$CellContext`sw$ = ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s0$$]]; $CellContext`swx = 
+             ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s1$$]]; Null}] 
+         If[$CellContext`Nbolas$$ == 1, {$CellContext`sw$ = ReplaceAll[
+               $CellContext`s[$CellContext`time$$], 
+               $CellContext`sol$[$CellContext`s0$$]]; Null}]; Show[{
+           ParametricPlot[
+            Evaluate[{
+              $CellContext`cycloid[$CellContext`t], 
+              $CellContext`evolute[$CellContext`t]}], {$CellContext`t, 0, 2 
+             Pi}, PlotLabel -> StringJoin["Periodo: ", 
+              ToString[
+               $CellContext`period$[$CellContext`s0$$]]], 
+            PlotStyle -> {Dashed, 
+              Directive[Thick, Orange]}, 
+            PlotRange -> {{-3.3, 3.3}, {2.05, -2.15}}, Axes -> True, Ticks -> 
+            None, AxesStyle -> DotDashed, ImageSize -> {600, 400}, Epilog -> {
+              If[$CellContext`Nbolas$$ == 4, {{Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`sw$, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`sw$], 
+                   $CellContext`evolute[$CellContext`sw$]}]}, {Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`swx, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`swx], 
+                   $CellContext`evolute[$CellContext`swx]}]}, {Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`swy, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`swy], 
+                   $CellContext`evolute[$CellContext`swy]}]}, {Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`swz, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`swz], 
+                   $CellContext`evolute[$CellContext`swz]}]}, {
+                 PointSize[0.04], $CellContext`a2$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`swx]]}, {
+                 PointSize[0.04], $CellContext`a3$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`swy]]}, {
+                 PointSize[0.04], $CellContext`a4$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`swz]]}, {
+                 PointSize[0.04], $CellContext`a0$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`sw$]]}}], 
+              If[$CellContext`Nbolas$$ == 3, {{Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`sw$, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`sw$], 
+                   $CellContext`evolute[$CellContext`sw$]}]}, {Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`swx, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`swx], 
+                   $CellContext`evolute[$CellContext`swx]}]}, {Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`swy, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`swy], 
+                   $CellContext`evolute[$CellContext`swy]}]}, {
+                 PointSize[0.04], $CellContext`a2$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`swx]]}, {
+                 PointSize[0.04], $CellContext`a3$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`swy]]}, {
+                 PointSize[0.04], $CellContext`a0$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`sw$]]}}], 
+              If[$CellContext`Nbolas$$ == 2, {{Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`sw$, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`sw$], 
+                   $CellContext`evolute[$CellContext`sw$]}]}, {Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`swx, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`swx], 
+                   $CellContext`evolute[$CellContext`swx]}]}, {
+                 PointSize[0.04], $CellContext`a2$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`swx]]}, {
+                 PointSize[0.04], $CellContext`a0$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`sw$]]}}], 
+              If[$CellContext`Nbolas$$ == 1, {{Thick, Blue, 
+                 Part[
+                  ParametricPlot[
+                   $CellContext`evolute[$CellContext`s], {$CellContext`s, \
+$CellContext`sw$, Pi}], 1], Green, 
+                 Line[{
+                   $CellContext`cycloid[$CellContext`sw$], 
+                   $CellContext`evolute[$CellContext`sw$]}]}, {
+                 PointSize[0.04], $CellContext`a0$$, 
+                 Point[
+                  $CellContext`cycloid[$CellContext`sw$]]}}]}]}]], 
+      "Specifications" :> {{{$CellContext`time$$, 0, 
+          "Anima\[CCedilla]\[ATilde]o"}, 0, 
+         Dynamic[$CellContext`tMax$$], 
+         Dynamic[$CellContext`speed$$], ControlType -> Trigger, 
+         DisplayAllSteps -> True, 
+         AppearanceElements -> {
+          "StepLeftButton", "StepRightButton", "PlayPauseButton", 
+           "ResetButton"}, ControlPlacement -> 1}, 
+        Row[{
+          Manipulate`Place[1]}], {{$CellContext`tMax$$, 100}, ControlType -> 
+         None}, {{$CellContext`\[Epsilon]$$, 
+          Rational[1, 10000]}, ControlType -> 
+         None}, {{$CellContext`speed$$, 0.01, 
+          "Velocidade Anima\[CCedilla]\[ATilde]o"}, 0.005, 0.02, 0.005, 
+         ImageSize -> Small, Appearance -> 
+         "Labeled"}, {{$CellContext`Nbolas$$, 2, "N\.ba Bolas"}, {1, 2, 3, 
+         4}}, {{$CellContext`a0$$, 
+          RGBColor[1, 0, 0], "Cor1"}, Gray, ControlType -> ColorSlider, 
+         ImageSize -> Small, ControlPlacement -> 2}, {{$CellContext`a2$$, 
+          GrayLevel[0], "Cor2"}, Gray, ControlType -> ColorSlider, ImageSize -> 
+         Small, ControlPlacement -> 3}, {{$CellContext`a3$$, 
+          RGBColor[0, 0, 1], "Cor3"}, Gray, ControlType -> ColorSlider, 
+         ImageSize -> Small, ControlPlacement -> 4}, {{$CellContext`a4$$, 
+          RGBColor[0, 1, 0], "Cor4"}, Gray, ControlType -> ColorSlider, 
+         ImageSize -> Small, ControlPlacement -> 5}, 
+        Row[{
+          Manipulate`Place[2], 
+          Spacer[20], 
+          Manipulate`Place[3], 
+          Spacer[20], 
+          Manipulate`Place[4], 
+          Spacer[20], 
+          Manipulate`Place[5], 
+          Spacer[20]}], {{$CellContext`s0$$, 1.5, "amplitude 1"}, 
+         Dynamic[$CellContext`\[Epsilon]$$/1.8], 
+         Dynamic[Pi - $CellContext`\[Epsilon]$$], ImageSize -> Tiny, 
+         ControlPlacement -> 6}, {{$CellContext`s1$$, 2, "amplitude 2"}, 
+         Dynamic[$CellContext`\[Epsilon]$$/1.8], 
+         Dynamic[Pi - $CellContext`\[Epsilon]$$], ImageSize -> Tiny, 
+         ControlPlacement -> 7}, {{$CellContext`s2$$, 2.5, "amplitude 3"}, 
+         Dynamic[$CellContext`\[Epsilon]$$/1.8], 
+         Dynamic[Pi - $CellContext`\[Epsilon]$$], ImageSize -> Tiny, 
+         ControlPlacement -> 8}, {{$CellContext`s3$$, 3, "amplitude 4"}, 
+         Dynamic[$CellContext`\[Epsilon]$$/1.8], 
+         Dynamic[Pi - $CellContext`\[Epsilon]$$], ImageSize -> Tiny, 
+         ControlPlacement -> 9}, 
+        Row[{
+          Manipulate`Place[6], 
+          Spacer[20], 
+          Manipulate`Place[7], 
+          Spacer[20], 
+          Manipulate`Place[8], 
+          Spacer[20], 
+          Manipulate`Place[9], 
+          Spacer[20]}]}, 
+      "Options" :> {
+       TrackedSymbols :> Manipulate, SynchronousUpdating -> False}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{641., {266., 271.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`g = 9.81, 
+       Attributes[Derivative] = {NHoldAll, ReadProtected}, $CellContext`swx = 
+       2.0000000157473212`, $CellContext`swy = 
+       2.500000008149005, $CellContext`swz = 
+       3.0000000017391875`, $CellContext`cycloid[
+         Pattern[$CellContext`s, 
+          Blank[]]] := {$CellContext`s - Sin[$CellContext`s] - Pi, -1 + 
+         Cos[$CellContext`s]}, $CellContext`evolute[
+         Pattern[$CellContext`s, 
+          Blank[]]] := {$CellContext`s + Sin[$CellContext`s] - Pi, 2 
+         Sin[$CellContext`s/2]^2}}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.604579958569373*^9, 3.6045800067750125`*^9, {3.6045800923419757`*^9, 
+   3.604580158470422*^9}, {3.6045801947691946`*^9, 3.604580231692992*^9}, 
+   3.604580285273911*^9, 3.604580535968354*^9, 3.6045805999873238`*^9, 
+   3.604580706696019*^9, 3.6045808570007286`*^9, {3.604580925551182*^9, 
+   3.6045809520369368`*^9}, 3.604581073090127*^9, {3.6045811347495947`*^9, 
+   3.6045811465314617`*^9}, {3.6045812031594143`*^9, 
+   3.6045812355204763`*^9}, {3.6045812740849876`*^9, 3.604581307821129*^9}, 
+   3.605717036454027*^9, {3.605717083880429*^9, 3.6057171173150864`*^9}, {
+   3.605717163846243*^9, 3.605717241303261*^9}, 3.605717271835013*^9, {
+   3.6057173512794485`*^9, 3.6057173718547974`*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["CAPTION", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell["\<\
+This Demonstration illustrates the isochronous movement of the cycloidal \
+(tautochrone) pendulum.\
+\>", "Text"],
+
+Cell["\<\
+In 1656, Dutch mathematician and scientist Christiaan Huygens discovered that \
+the simple pendulum is not isochronous, that is, its period depends on the \
+amplitude of the swing.\
+\>", "Text"],
+
+Cell["\<\
+He realized that the pendulum would be isochronous if the bob of a pendulum \
+swung along a cycloidal arc rather than the circular arc of the classical \
+pendulum. He proved that the cycloid is a tautochrone curve.\
+\>", "Text"],
+
+Cell["\<\
+To construct this cycloidal pendulum, he used a bob attached to a flexible \
+rod. The movement of the pendulum was restricted on both sides by plates \
+forming a cycloidal arc. When the rod unwraps from these plates, the bob will \
+follow a path that is the involute of the shape of the plates. Since the \
+cycloid is its own evolute, this is a congruent cycloid.\
+\>", "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["DETAILS", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "Considered here is a simple pendulum consisting of a bob, idealized as a \
+point mass, attached to a pivot point by a massless string having fixed \
+length ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"L", "=", "2"}], TraditionalForm]], "InlineMath"],
+ ". The pendulum is assumed to be subject only to gravity."
+}], "Text"],
+
+Cell[TextData[{
+ "The path of the bob is the cycloid formed by a circle of radius 1 running \
+from ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", "\[Pi]"}], ",", "0"}], ")"}], TraditionalForm]], 
+  "InlineMath"],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"\[Pi]", ",", "0"}], ")"}], TraditionalForm]], "InlineMath"],
+ ", passing through the point ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"0", ",", 
+     RowBox[{"-", "2"}]}], ")"}], TraditionalForm]], "InlineMath"],
+ ". With ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"s", "(", "t", ")"}], TraditionalForm]], "InlineMath"],
+ " as the angle through which the circle has rolled by time ",
+ Cell[BoxData[
+  FormBox["t", TraditionalForm]], "InlineMath"],
+ ", this cycloid is given by the parametric equation"
+}], "Text"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x", ",", "y"}], ")"}], "=", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"s", "(", "t", ")"}], "-", 
+        RowBox[{"sin", " ", 
+         RowBox[{"s", "(", "t", ")"}]}], "-", "\[Pi]"}], ",", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"cos", " ", 
+         RowBox[{"s", "(", "t", ")"}]}]}]}], " ", ")"}]}], "]"}], 
+   TraditionalForm]], "InlineMath"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "Using Lagrangian dynamics, we have ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[ScriptCapitalL]", "=", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"2", " ", "m"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"sin", " "}], "2"], "t", "  ", 
+        SuperscriptBox[
+         RowBox[{
+          SuperscriptBox["s", "\[Prime]",
+           MultilineFunction->None], "(", "t", ")"}], "2"]}], "+", 
+       SuperscriptBox[
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["s", "\[Prime]",
+            MultilineFunction->None], "(", "t", ")"}], "-", 
+          RowBox[{"cos", " ", "t", "  ", 
+           RowBox[{
+            SuperscriptBox["s", "\[Prime]",
+             MultilineFunction->None], "(", "t", ")"}]}]}], "]"}], "2"]}], 
+      ")"}]}]}], TraditionalForm]], "InlineMath"]
+}], "Text"],
+
+Cell[TextData[{
+ "and the resulting equation of motion is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"sin", " ", 
+      RowBox[{
+       RowBox[{"s", "(", "t", ")"}], " ", "[", 
+       RowBox[{"g", "-", 
+        SuperscriptBox[
+         RowBox[{
+          SuperscriptBox["s", "\[Prime]",
+           MultilineFunction->None], "(", "t", ")"}], "2"]}], "]"}]}], "+", 
+     RowBox[{
+      RowBox[{"2", "[", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"cos", " ", 
+         RowBox[{"s", "(", "t", ")"}]}]}], "]"}], 
+      RowBox[{
+       SuperscriptBox["s", "\[Prime]\[Prime]",
+        MultilineFunction->None], "(", "t", ")"}]}]}], "=", "0"}], 
+   TraditionalForm]], "InlineMath"],
+ "."
+}], "Text"],
+
+Cell[TextData[{
+ "The period of a cycloidal pendulum is ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2", "\[Pi]", " ", 
+    SqrtBox[
+     RowBox[{"2", " ", 
+      RowBox[{"L", "/", "g"}]}]]}], TraditionalForm]], "InlineMath"],
+ " for any amplitude. With ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"L", "=", "2"}], TraditionalForm]], "InlineMath"],
+ ", the period is 4.01213. In this Demonstration, the function ",
+ StyleBox["period[amplitude]", "MR"],
+ " verifies this fact by escaping ",
+ StyleBox["NDSolve", "MR"],
+ " with the \"",
+ StyleBox["EventLocator", "MR"],
+ "\" method at the point where the pendulum passes the vertical."
+}], "Text"],
+
+Cell["\<\
+Much more information about the Huygens clock can be found in the following \
+reference.\
+\>", "Text"],
+
+Cell["Reference", "Text"],
+
+Cell[TextData[{
+ "[1] A. Emmerson. ",
+ ButtonBox["\"Things Are Seldom What They Seem \[LongDash] Christiaan \
+Huygens, the Pendulum and the Cycloid.\"",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.antique-horology.org/Piggott/RH/Images/81V_Cycloid.pdf"], 
+    None},
+  ButtonNote->
+   "http://www.antique-horology.org/Piggott/RH/Images/81V_Cycloid.pdf"],
+ " ",
+ StyleBox["The Horological Foundation",
+  FontSlant->"Italic"],
+ ". (2010) www.antique-horology.org/Piggott/RH/Images/81V_Cycloid.pdf."
+}], "Text"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["THIS NOTEBOOK IS THE SOURCE CODE FROM", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{48, 10}, {4, 28}},
+ CellGroupingRules->{"SectionGrouping", 25},
+ CellFrameMargins->{{48, 48}, {6, 5}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->10,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "\[NonBreakingSpace]",
+ ButtonBox["Erik Mahieu",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Erik+Mahieu"], 
+    None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Erik+Mahieu"]
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6]],
+
+Cell[TextData[{
+ "\"",
+ ButtonBox["Cycloidal Pendulum",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/CycloidalPendulum/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/CycloidalPendulum/"],
+ "\"\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["http://demonstrations.wolfram.com/CycloidalPendulum/",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/CycloidalPendulum/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/CycloidalPendulum/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["Wolfram Demonstrations Project",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]Published: November 30, 2011\nedit \
+by Felipe Tuyama de Faria Barbosa, March 23, 2014"
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ CellChangeTimes->{{3.6045814097951965`*^9, 3.604581427593007*^9}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.5]],
+
+Cell[TextData[{
+ "A full-function Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " system is required to edit this notebook.\n",
+ StyleBox[ButtonBox["GET WOLFRAM MATHEMATICA \[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.wolfram.com/products/mathematica/"], None},
+  ButtonNote->"http://www.wolfram.com/products/mathematica/"],
+  FontFamily->"Helvetica",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.42, 0]]
+}], "Text",
+ CellFrame->True,
+ CellMargins->{{48, 68}, {8, 28}},
+ CellFrameMargins->12,
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ CellChangeTimes->{3.3750111182355957`*^9},
+ ParagraphSpacing->{1., 1.},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.411765],
+ Background->RGBColor[1, 1, 1]],
+
+Cell[TextData[{
+ "\[Copyright] ",
+ StyleBox[ButtonBox["Wolfram Demonstrations Project & Contributors",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Terms of Use",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/termsofuse.html"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/termsofuse.html"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Make a new version of this Demonstration \
+\[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/participate/upload.jsp?id=\
+CycloidalPendulum"], None},
+  ButtonNote->None],
+  FontColor->GrayLevel[0.6]]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellMargins->{{48, 10}, {20, 50}},
+ CellFrameMargins->{{6, 0}, {6, 6}},
+ CellFrameColor->GrayLevel[0.6],
+ FontFamily->"Verdana",
+ FontSize->9,
+ FontColor->GrayLevel[0.6]]
+}, Open  ]]
+},
+Editable->True,
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+CellInsertionPointCell->None,
+WindowSize->{912, 650},
+WindowMargins->{{79, Automatic}, {Automatic, -9}},
+WindowElements->{
+ "StatusArea", "MemoryMonitor", "MagnificationPopUp", "VerticalScrollBar", 
+  "MenuBar"},
+WindowTitle->"Cycloidal Pendulum - Source",
+DockedCells->{},
+CellContext->Notebook,
+Magnification->0.8999999761581421,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[598, 21, 236, 5, 65, "Section"],
+Cell[CellGroupData[{
+Cell[859, 30, 3768, 65, 33, "Section"],
+Cell[4630, 97, 866, 24, 52, "Input",
+ InitializationCell->True,
+ CellID->638803233],
+Cell[CellGroupData[{
+Cell[5521, 125, 30689, 657, 1328, "Input"],
+Cell[36213, 784, 17753, 363, 552, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54015, 1153, 209, 6, 56, "Section"],
+Cell[54227, 1161, 122, 3, 25, "Text"],
+Cell[54352, 1166, 204, 4, 42, "Text"],
+Cell[54559, 1172, 238, 4, 42, "Text"],
+Cell[54800, 1178, 387, 6, 59, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[55224, 1189, 209, 6, 29, "Section"],
+Cell[55436, 1197, 336, 8, 42, "Text"],
+Cell[55775, 1207, 833, 28, 42, "Text"],
+Cell[56611, 1237, 515, 19, 25, "Text"],
+Cell[57129, 1258, 898, 28, 33, "Text"],
+Cell[58030, 1288, 740, 25, 27, "Text"],
+Cell[58773, 1315, 637, 19, 67, "Text"],
+Cell[59413, 1336, 112, 3, 25, "Text"],
+Cell[59528, 1341, 25, 0, 25, "Text"],
+Cell[59556, 1343, 526, 14, 42, "Text"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[60119, 1362, 355, 9, 19, "Text",
+ CellGroupingRules->{"SectionGrouping", 25}],
+Cell[60477, 1373, 410, 13, 18, "Text"],
+Cell[60890, 1388, 1104, 26, 77, "Text"],
+Cell[61997, 1416, 793, 24, 92, "Text"],
+Cell[62793, 1442, 1189, 33, 80, "Text"]
+}, Open  ]]
+}
+]
+*)
+

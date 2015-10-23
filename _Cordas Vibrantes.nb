@@ -1,0 +1,648 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     29099,        639]
+NotebookOptionsPosition[     28593,        616]
+NotebookOutlinePosition[     28938,        631]
+CellTagsIndexPosition[     28895,        628]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Cordas Vibrantes", "Title",
+ CellChangeTimes->{{3.587843552449934*^9, 3.587843604577612*^9}, {
+   3.5880926773008614`*^9, 3.5880926840980825`*^9}, {3.591942603441222*^9, 
+   3.591942609686378*^9}, 3.594115361699109*^9, {3.5941343478831463`*^9, 
+   3.594134351977106*^9}, {3.5942412414620132`*^9, 3.5942412686665163`*^9}, {
+   3.602712657588518*^9, 3.602712664292*^9}, {3.6027734491878147`*^9, 
+   3.6027734502034907`*^9}, {3.602773760219905*^9, 3.6027737664077587`*^9}, {
+   3.609763643537114*^9, 3.6097636465160975`*^9}},
+ TextAlignment->Center],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"Remove", "::", "\"\<rmnsm\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"General", "::", "\"\<spell1\>\""}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"General", "::", "\"\<spell\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Off", "[", 
+   RowBox[{"Solve", "::", "\"\<ifun\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Remove", "[", "\"\<`*\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$Line", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Names", "[", "\"\<`*\>\"", "]"}]}], "Input",
+ CellChangeTimes->{{3.5299418173482122`*^9, 3.5299418247082224`*^9}, {
+  3.52995858632915*^9, 3.5299585870781937`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{
+  3.609848087885*^9, {3.609848129943487*^9, 3.6098481503195477`*^9}, 
+   3.609848417969673*^9, 3.6098486722798166`*^9, 3.6098490740694847`*^9, 
+   3.609850874894486*^9, 3.6098509368680153`*^9, 3.609851318626802*^9, 
+   3.6098513901176944`*^9, 3.6098517635956683`*^9, 3.6098517955281715`*^9, 
+   3.609851861578923*^9, 3.609852237131915*^9, 3.609852274250554*^9, 
+   3.6098694893549514`*^9, {3.609869521438376*^9, 3.609869530136174*^9}, 
+   3.6098697222775574`*^9, 3.6098697665441065`*^9, 3.6098699761766605`*^9, {
+   3.609870016991292*^9, 3.609870018178852*^9}, 3.609870075813261*^9, 
+   3.6098701728808208`*^9, {3.609870226894653*^9, 3.6098702449737206`*^9}, 
+   3.609870589023079*^9, 3.609870707802307*^9, 3.6098711959609337`*^9, 
+   3.609871279949684*^9, {3.609871547916789*^9, 3.609871575652609*^9}, 
+   3.6098716449389067`*^9, {3.609871691769476*^9, 3.6098717215054026`*^9}, 
+   3.6099205316123486`*^9, 3.6099205790835752`*^9, 3.6099206103508315`*^9, 
+   3.6099207305914783`*^9, 3.609920904006775*^9, 3.6099209357740593`*^9, {
+   3.609920987542383*^9, 3.609921001558741*^9}, {3.609921050295659*^9, 
+   3.609921075593853*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", "x_", "]"}], ":=", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "-", "5"}], ")"}], "2"]}]]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"g", "[", "x_", "]"}], ":=", "0"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"sol", "=", "\[IndentingNewLine]", 
+     RowBox[{"NDSolve", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           SubscriptBox["\[PartialD]", 
+            RowBox[{"t", ",", "t"}]], 
+           RowBox[{"y", "[", 
+            RowBox[{"x", ",", "t"}], "]"}]}], "\[Equal]", 
+          RowBox[{
+           SuperscriptBox["c", "2"], 
+           RowBox[{
+            SubscriptBox["\[PartialD]", 
+             RowBox[{"x", ",", "x"}]], 
+            RowBox[{"y", "[", 
+             RowBox[{"x", ",", "t"}], "]"}]}]}]}], ",", "\[IndentingNewLine]",
+          "                ", 
+         RowBox[{
+          RowBox[{"y", "[", 
+           RowBox[{"x", ",", "0"}], "]"}], "\[Equal]", 
+          RowBox[{"f", "[", "x", "]"}]}], ",", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+           RowBox[{"condi\[CCedilla]\[ATilde]o", " ", "inicial"}], " ", "-", 
+           " ", 
+           RowBox[{"posi\[CCedilla]\[ATilde]o", " ", "inicial"}]}], " ", 
+          "*)"}], "\[IndentingNewLine]", "                ", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["y", 
+            TagBox[
+             RowBox[{"(", 
+              RowBox[{"0", ",", "1"}], ")"}],
+             Derivative],
+            MultilineFunction->None], "[", 
+           RowBox[{"x", ",", "0"}], "]"}], "\[Equal]", 
+          RowBox[{"g", "[", "x", "]"}]}], ",", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+           RowBox[{"condi\[CCedilla]\[ATilde]o", " ", "inicial"}], " ", "-", 
+           " ", 
+           RowBox[{"velocidade", " ", "inicial"}]}], "*)"}], "  ", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Switch", "[", 
+          RowBox[{"ext1", ",", "\[IndentingNewLine]", "\"\<fixa1\>\"", ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"y", "[", 
+               RowBox[{"x", ",", "t"}], "]"}], "/.", 
+              RowBox[{"x", "\[Rule]", "0"}]}], ")"}], "==", "0"}], ",", 
+           RowBox[{"(*", " ", 
+            RowBox[{
+            "condi\[CCedilla]\[ATilde]o", " ", "de", " ", "contorno", " ", 
+             "extremidade", " ", "fixa"}], " ", "*)"}], 
+           "\[IndentingNewLine]", "\"\<livre1\>\"", ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               SubscriptBox["\[PartialD]", "x"], 
+               RowBox[{"y", "[", 
+                RowBox[{"x", ",", "t"}], "]"}]}], "/.", 
+              RowBox[{"x", "\[Rule]", "0"}]}], ")"}], "==", "0"}]}], " ", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           "condi\[CCedilla]\[ATilde]o", " ", "de", " ", "contorno", " ", 
+            "extremidade", " ", "livre"}], " ", "*)"}], "\[IndentingNewLine]",
+           "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"Switch", "[", 
+          RowBox[{"ext2", ",", "\[IndentingNewLine]", "\"\<fixa2\>\"", ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"y", "[", 
+               RowBox[{"x", ",", "t"}], "]"}], "/.", 
+              RowBox[{"x", "\[Rule]", "L"}]}], ")"}], "==", "0"}], ",", 
+           RowBox[{"(*", " ", 
+            RowBox[{
+            "condi\[CCedilla]\[ATilde]o", " ", "de", " ", "contorno", " ", 
+             "extremidade", " ", "fixa"}], " ", "*)"}], 
+           "\[IndentingNewLine]", "\"\<livre2\>\"", ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               SubscriptBox["\[PartialD]", "x"], 
+               RowBox[{"y", "[", 
+                RowBox[{"x", ",", "t"}], "]"}]}], "/.", 
+              RowBox[{"x", "\[Rule]", "L"}]}], ")"}], "==", "0"}]}], " ", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           "condi\[CCedilla]\[ATilde]o", " ", "de", " ", "contorno", " ", 
+            "extremidade", " ", "livre"}], " ", "*)"}], "\[IndentingNewLine]",
+           "]"}]}], "\[IndentingNewLine]", "}"}], ",", "y", ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "0", ",", "L"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], ",", 
+       RowBox[{"MaxSteps", "\[Rule]", "50"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"solucao", "=", 
+     RowBox[{"y", "/.", "\[InvisibleSpace]", 
+      RowBox[{"First", "[", "sol", "]"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"solucao", "[", 
+         RowBox[{"x", ",", "t1"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "L"}], "}"}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+        RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", " ", 
+        RowBox[{"GridLinesStyle", "\[Rule]", 
+         RowBox[{"Directive", "[", 
+          RowBox[{"Black", ",", "Dashed"}], "]"}]}], ",", 
+        RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "L"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "1.5"}], ",", "1.5"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", "I"}], ",", 
+        RowBox[{"PlotLabel", "\[Rule]", 
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<Retrato do Pulso\>\"", ",", "25"}], "]"}]}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "y"}], "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+      "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Dynamic", "[", "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{"{", "  ", "\[IndentingNewLine]", 
+      RowBox[{"Switch", "[", "  ", 
+       RowBox[{
+       "gr", ",", "\[IndentingNewLine]", 
+        "\"\<\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Show", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{"Plot", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              SubscriptBox["\[PartialD]", "t"], 
+              RowBox[{"solucao", "[", 
+               RowBox[{"x", ",", "t"}], "]"}]}], "/.", 
+             RowBox[{"t", "\[Rule]", "t1"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "0", ",", "L"}], "}"}], ",", 
+            RowBox[{"PlotStyle", "\[Rule]", "Thick"}], ",", 
+            RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", " ", 
+            RowBox[{"GridLinesStyle", "\[Rule]", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"Black", ",", "Dashed"}], "]"}]}], ",", 
+            RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+            RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"0.75", "I"}]}], ",", 
+            RowBox[{"PlotLabel", "\[Rule]", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<Velocidade do Pulso\>\"", ",", "15"}], "]"}]}]}], 
+           "]"}], "\[IndentingNewLine]", "}"}], "]"}], ",", " ", 
+        "\[IndentingNewLine]", "\"\<Campo\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{"Show", "[", 
+         RowBox[{"{", " ", "\[IndentingNewLine]", 
+          RowBox[{"Plot3D", "[", 
+           RowBox[{
+            RowBox[{"solucao", "[", 
+             RowBox[{"x", ",", "t"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "0", ",", "L"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", "0", ",", "tmax"}], "}"}], ",", 
+            RowBox[{"PlotPoints", "\[Rule]", "40"}], ",", 
+            RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"0.75", "I"}]}], ",", 
+            RowBox[{"PlotLabel", "\[Rule]", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<Equa\[CCedilla]\[ATilde]o da Onda y(x,t)\>\"", ",", "15"}],
+               "]"}]}]}], "]"}], "\[IndentingNewLine]", "}"}], "]"}]}], 
+       "\[IndentingNewLine]", "]"}], " ", "\[IndentingNewLine]", "}"}], "]"}],
+     "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "gr", ",", "\"\<\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)\>\"",
+        ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Gr\[AAcute]fico\>\"", ",", "Bold", ",", "12"}], "]"}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)\>\"", ",", 
+       "\"\<Campo\>\""}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ext1", ",", "\"\<fixa1\>\"", ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Extremidade 1\>\"", ",", "Bold", ",", "12"}], "]"}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<fixa1\>\"", ",", "\"\<livre1\>\""}], "}"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ext2", ",", "\"\<fixa2\>\"", ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Extremidade 2\>\"", ",", "Bold", ",", "12"}], "]"}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<fixa2\>\"", ",", "\"\<livre2\>\""}], "}"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", 
+   RowBox[{"Item", "[", 
+    RowBox[{"\"\<Anima\[CCedilla]\[ATilde]o\>\"", ",", 
+     RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t1", ",", "0", ",", "\"\<Tempo (t)\>\""}], "}"}], ",", "0", 
+     ",", "tmax", ",", ".2", ",", 
+     RowBox[{"ControlType", "\[Rule]", "Animator"}], ",", 
+     RowBox[{"DisplayAllSteps", "\[Rule]", "True"}], ",", 
+     RowBox[{"AppearanceElements", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<PlayPauseButton\>\"", ",", "\"\<DirectionButton\>\"", ",", 
+        "\"\<ResetButton\>\"", ",", "\"\<StepLeftButton\>\"", ",", 
+        "\"\<StepRightButton\>\""}], "}"}]}], ",", 
+     RowBox[{"AnimationRunning", "\[Rule]", "False"}], ",", 
+     RowBox[{"AnimationRate", "\[Rule]", "10"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"t1", ",", "0", ",", "\"\<Tempo (t)\>\""}], "}"}], ",", "0", 
+     ",", "tmax", ",", ".1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"tmax", ",", "10", ",", "\"\<Tempo m\[AAcute]ximo (Tmax)\>\""}],
+       "}"}], ",", "10", ",", "50", ",", "1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", 
+   RowBox[{"Item", "[", 
+    RowBox[{"\"\<Par\[AHat]metros\>\"", ",", 
+     RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"L", ",", "10", ",", "\"\<Comprimento (L)\>\""}], "}"}], ",", 
+     ".5", ",", "20", ",", ".1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", "1", ",", "\"\<Velocidade da Onda (c)\>\""}], "}"}], 
+     ",", ".5", ",", "20", ",", ".1", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"I", ",", "400", ",", "\"\<Tamanho da Imagem\>\""}], "}"}], ",",
+      "300", ",", "700", ",", "100", ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Small"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Right"}], ",", 
+   RowBox[{"SynchronousUpdating", "\[Rule]", "True"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.6096017120702825`*^9, 3.609601773370406*^9}, {
+   3.6096018473341694`*^9, 3.6096018787420783`*^9}, {3.609608605693009*^9, 
+   3.6096086070680623`*^9}, {3.60976366302112*^9, 3.6097636636195183`*^9}, {
+   3.6097637487823677`*^9, 3.6097639586754713`*^9}, {3.6097639970630956`*^9, 
+   3.6097640179820595`*^9}, {3.609764120317377*^9, 3.6097641212940254`*^9}, {
+   3.609764173929162*^9, 3.6097641844281693`*^9}, {3.6097642584595833`*^9, 
+   3.6097642690686655`*^9}, {3.609847833856148*^9, 3.6098478870307813`*^9}, {
+   3.6098480837910614`*^9, 3.609848143834838*^9}, {3.6098483017177963`*^9, 
+   3.6098484625032454`*^9}, {3.6098485441481333`*^9, 3.609848560477108*^9}, {
+   3.6098485994478917`*^9, 3.6098486300276175`*^9}, {3.6098486609042234`*^9, 
+   3.6098487129850645`*^9}, {3.6098487723370705`*^9, 
+   3.6098488519952445`*^9}, {3.609848885883868*^9, 3.609848889576331*^9}, {
+   3.6098489790240383`*^9, 3.6098490476128235`*^9}, {3.609849115945437*^9, 
+   3.6098491168250237`*^9}, {3.6098491542219887`*^9, 3.609849156578562*^9}, {
+   3.609849202532235*^9, 3.60984931564174*^9}, {3.609849484073866*^9, 
+   3.6098497109138255`*^9}, {3.609849852155569*^9, 3.6098498935014763`*^9}, {
+   3.6098499484418435`*^9, 3.609849991513135*^9}, {3.6098501593898153`*^9, 
+   3.609850197302452*^9}, {3.609850236023222*^9, 3.6098502528834867`*^9}, {
+   3.6098503184337716`*^9, 3.609850325918538*^9}, {3.609850652232828*^9, 
+   3.609850826366912*^9}, {3.6098508603468733`*^9, 3.6098508827542663`*^9}, {
+   3.6098509191952133`*^9, 3.609850999433775*^9}, {3.6098510478066893`*^9, 
+   3.609851052541339*^9}, {3.6098511030812387`*^9, 3.609851103346851*^9}, {
+   3.6098512073084855`*^9, 3.6098513025165787`*^9}, {3.6098513480529947`*^9, 
+   3.609851386945649*^9}, {3.6098514941601768`*^9, 3.6098517946843705`*^9}, {
+   3.609851912473527*^9, 3.6098519434382906`*^9}, 3.6098521311512084`*^9, {
+   3.6098694864430075`*^9, 3.6098694867071843`*^9}, {3.6098696845342393`*^9, 
+   3.609869763047772*^9}, {3.6098698048216567`*^9, 3.60986981603214*^9}, 
+   3.6098700511713476`*^9, {3.6098701609426994`*^9, 3.609870167583672*^9}, {
+   3.6098702072842827`*^9, 3.6098702253476973`*^9}, {3.6098706882562666`*^9, 
+   3.609870691625514*^9}, {3.6098708539514866`*^9, 3.6098708541858807`*^9}, {
+   3.6098709373642664`*^9, 3.609870940192539*^9}, {3.609870981996644*^9, 
+   3.609870982606053*^9}, {3.609871181632056*^9, 3.6098712769807816`*^9}, {
+   3.6098713199830217`*^9, 3.6098714883511796`*^9}, {3.609871533462912*^9, 
+   3.6098715719649205`*^9}, {3.6098716408903923`*^9, 
+   3.6098716891755953`*^9}, {3.60992057475525*^9, 3.609920607944455*^9}, {
+   3.609920677026212*^9, 3.6099207285288773`*^9}, {3.6099207744375157`*^9, 
+   3.609920805704775*^9}, {3.609920843159853*^9, 3.609920933164548*^9}, {
+   3.6099209795732174`*^9, 3.609921095235503*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`c$$ = 1, $CellContext`ext1$$ = 
+    "fixa1", $CellContext`ext2$$ = "fixa2", $CellContext`gr$$ = 
+    "\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)", I$$ = 
+    400, $CellContext`L$$ = 10, $CellContext`t1$$ = 0, $CellContext`tmax$$ = 
+    10, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Dynamic[
+        Show[{
+          
+          Switch[$CellContext`gr$$, 
+           "\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)", 
+           Show[{
+             Plot[
+              ReplaceAll[
+               D[
+                $CellContext`solucao[$CellContext`x, $CellContext`t], \
+$CellContext`t], $CellContext`t -> $CellContext`t1$$], {$CellContext`x, 
+               0, $CellContext`L$$}, PlotStyle -> Thick, GridLines -> 
+              Automatic, GridLinesStyle -> Directive[Black, Dashed], Frame -> 
+              True, PlotRange -> All, ImageSize -> 0.75 I$$, PlotLabel -> 
+              Style["Velocidade do Pulso", 15]]}], "Campo", 
+           Show[{
+             Plot3D[
+              $CellContext`solucao[$CellContext`x, $CellContext`t], \
+{$CellContext`x, 0, $CellContext`L$$}, {$CellContext`t, 
+               0, $CellContext`tmax$$}, PlotPoints -> 40, PlotRange -> All, 
+              ImageSize -> 0.75 I$$, PlotLabel -> 
+              Style["Equa\[CCedilla]\[ATilde]o da Onda y(x,t)", 15], Axes -> 
+              True]}]]}]]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`gr$$], 
+       "\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)", 
+       Style["Gr\[AAcute]fico", Bold, 12]}, {
+      "\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)", "Campo"}}, {{
+       Hold[$CellContext`ext1$$], "fixa1", 
+       Style["Extremidade 1", Bold, 12]}, {"fixa1", "livre1"}}, {{
+       Hold[$CellContext`ext2$$], "fixa2", 
+       Style["Extremidade 2", Bold, 12]}, {"fixa2", "livre2"}}, {
+      Hold[
+       Item["Anima\[CCedilla]\[ATilde]o", Alignment -> Center]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`t1$$], 0, "Tempo (t)"}, 0, 
+      Dynamic[$CellContext`tmax$$], 0.2}, {{
+       Hold[$CellContext`t1$$], 0, "Tempo (t)"}, 0, 
+      Dynamic[$CellContext`tmax$$], 0.1}, {{
+       Hold[$CellContext`tmax$$], 10, "Tempo m\[AAcute]ximo (Tmax)"}, 10, 50, 
+      1}, {
+      Hold[
+       Item["Par\[AHat]metros", Alignment -> Center]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`L$$], 10, "Comprimento (L)"}, 0.5, 20, 0.1}, {{
+       Hold[$CellContext`c$$], 1, "Velocidade da Onda (c)"}, 0.5, 20, 0.1}, {{
+       Hold[I$$], 400, "Tamanho da Imagem"}, 300, 700, 100}}, 
+    Typeset`size$$ = {400., {136., 140.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`gr$145803$$ = False, $CellContext`ext1$145804$$ = 
+    False, $CellContext`ext2$145805$$ = False, $CellContext`t1$145806$$ = 
+    0, $CellContext`tmax$145807$$ = 0, $CellContext`L$145808$$ = 
+    0, $CellContext`c$145809$$ = 0, I$145810$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`c$$ = 1, $CellContext`ext1$$ = 
+        "fixa1", $CellContext`ext2$$ = "fixa2", $CellContext`gr$$ = 
+        "\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)", I$$ = 
+        400, $CellContext`L$$ = 10, $CellContext`t1$$ = 
+        0, $CellContext`tmax$$ = 10}, "ControllerVariables" :> {
+        Hold[$CellContext`gr$$, $CellContext`gr$145803$$, False], 
+        Hold[$CellContext`ext1$$, $CellContext`ext1$145804$$, False], 
+        Hold[$CellContext`ext2$$, $CellContext`ext2$145805$$, False], 
+        Hold[$CellContext`t1$$, $CellContext`t1$145806$$, 0], 
+        Hold[$CellContext`tmax$$, $CellContext`tmax$145807$$, 0], 
+        Hold[$CellContext`L$$, $CellContext`L$145808$$, 0], 
+        Hold[$CellContext`c$$, $CellContext`c$145809$$, 0], 
+        Hold[I$$, I$145810$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ($CellContext`f[
+          Pattern[$CellContext`x, 
+           Blank[]]] := E^(-($CellContext`x - 5)^2); $CellContext`g[
+          Pattern[$CellContext`x, 
+           Blank[]]] := 0; $CellContext`sol = NDSolve[{D[
+             $CellContext`y[$CellContext`x, $CellContext`t], $CellContext`t, \
+$CellContext`t] == $CellContext`c$$^2 D[
+              $CellContext`y[$CellContext`x, $CellContext`t], $CellContext`x, \
+$CellContext`x], $CellContext`y[$CellContext`x, 
+             0] == $CellContext`f[$CellContext`x], 
+           Derivative[
+            0, 1][$CellContext`y][$CellContext`x, 
+             0] == $CellContext`g[$CellContext`x], 
+           Switch[$CellContext`ext1$$, "fixa1", ReplaceAll[
+              $CellContext`y[$CellContext`x, $CellContext`t], $CellContext`x -> 
+              0] == 0, "livre1", ReplaceAll[
+              D[
+               $CellContext`y[$CellContext`x, $CellContext`t], \
+$CellContext`x], $CellContext`x -> 0] == 0], 
+           Switch[$CellContext`ext2$$, "fixa2", ReplaceAll[
+              $CellContext`y[$CellContext`x, $CellContext`t], $CellContext`x -> \
+$CellContext`L$$] == 0, "livre2", ReplaceAll[
+              D[
+               $CellContext`y[$CellContext`x, $CellContext`t], \
+$CellContext`x], $CellContext`x -> $CellContext`L$$] == 
+            0]}, $CellContext`y, {$CellContext`x, 
+           0, $CellContext`L$$}, {$CellContext`t, 0, $CellContext`tmax$$}, 
+          MaxSteps -> 50]; $CellContext`solucao = ReplaceAll[$CellContext`y, 
+          First[$CellContext`sol]]; Show[{
+          Plot[
+           $CellContext`solucao[$CellContext`x, $CellContext`t1$$], \
+{$CellContext`x, 0, $CellContext`L$$}, PlotStyle -> Thick, GridLines -> 
+           Automatic, GridLinesStyle -> Directive[Black, Dashed], Frame -> 
+           True, PlotRange -> {{0, $CellContext`L$$}, {-1.5, 1.5}}, ImageSize -> 
+           I$$, PlotLabel -> Style["Retrato do Pulso", 25], 
+           AxesLabel -> {$CellContext`t, $CellContext`y}]}]), 
+      "Specifications" :> {
+        Dynamic[
+         Show[{
+           
+           Switch[$CellContext`gr$$, 
+            "\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)", 
+            Show[{
+              Plot[
+               ReplaceAll[
+                D[
+                 $CellContext`solucao[$CellContext`x, $CellContext`t], \
+$CellContext`t], $CellContext`t -> $CellContext`t1$$], {$CellContext`x, 
+                0, $CellContext`L$$}, PlotStyle -> Thick, GridLines -> 
+               Automatic, GridLinesStyle -> Directive[Black, Dashed], Frame -> 
+               True, PlotRange -> All, ImageSize -> 0.75 I$$, PlotLabel -> 
+               Style["Velocidade do Pulso", 15]]}], "Campo", 
+            Show[{
+              Plot3D[
+               $CellContext`solucao[$CellContext`x, $CellContext`t], \
+{$CellContext`x, 0, $CellContext`L$$}, {$CellContext`t, 
+                0, $CellContext`tmax$$}, PlotPoints -> 40, PlotRange -> All, 
+               ImageSize -> 0.75 I$$, PlotLabel -> 
+               Style["Equa\[CCedilla]\[ATilde]o da Onda y(x,t)", 15], Axes -> 
+               True]}]]}]], {{$CellContext`gr$$, 
+          "\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)", 
+          Style["Gr\[AAcute]fico", Bold, 12]}, {
+         "\!\(\*SubscriptBox[\(\[PartialD]\), \(t\)]\)y(x,t)", 
+          "Campo"}}, {{$CellContext`ext1$$, "fixa1", 
+          Style["Extremidade 1", Bold, 12]}, {
+         "fixa1", "livre1"}}, {{$CellContext`ext2$$, "fixa2", 
+          Style["Extremidade 2", Bold, 12]}, {"fixa2", "livre2"}}, Delimiter, 
+        Item[
+        "Anima\[CCedilla]\[ATilde]o", Alignment -> 
+         Center], {{$CellContext`t1$$, 0, "Tempo (t)"}, 0, 
+         Dynamic[$CellContext`tmax$$], 0.2, ControlType -> Animator, 
+         DisplayAllSteps -> True, 
+         AppearanceElements -> {
+          "PlayPauseButton", "DirectionButton", "ResetButton", 
+           "StepLeftButton", "StepRightButton"}, AnimationRunning -> False, 
+         AnimationRate -> 10}, {{$CellContext`t1$$, 0, "Tempo (t)"}, 0, 
+         Dynamic[$CellContext`tmax$$], 0.1, ImageSize -> Small, Appearance -> 
+         "Labeled"}, {{$CellContext`tmax$$, 10, 
+          "Tempo m\[AAcute]ximo (Tmax)"}, 10, 50, 1, ImageSize -> Small, 
+         Appearance -> "Labeled"}, Delimiter, 
+        Item[
+        "Par\[AHat]metros", Alignment -> 
+         Center], {{$CellContext`L$$, 10, "Comprimento (L)"}, 0.5, 20, 0.1, 
+         ImageSize -> Small, Appearance -> 
+         "Labeled"}, {{$CellContext`c$$, 1, "Velocidade da Onda (c)"}, 0.5, 
+         20, 0.1, ImageSize -> Small, Appearance -> "Labeled"}, 
+        Delimiter, {{I$$, 400, "Tamanho da Imagem"}, 300, 700, 100, ImageSize -> 
+         Small, Appearance -> "Labeled"}}, 
+      "Options" :> {ControlPlacement -> Right, SynchronousUpdating -> True}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{753., {259., 264.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.6098717239430313`*^9, 3.609920532190505*^9, 3.6099205798023634`*^9, 
+   3.6099206108039804`*^9, {3.60992069493337*^9, 3.6099207310758815`*^9}, 
+   3.609920806798581*^9, 3.609920869176833*^9, 3.6099209049443245`*^9, 
+   3.609920937055374*^9, {3.6099209880424094`*^9, 3.609921002965063*^9}, {
+   3.60992105081131*^9, 3.609921076328266*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{951, 648},
+WindowMargins->{{18, Automatic}, {Automatic, -7}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 552, 8, 90, "Title"],
+Cell[CellGroupData[{
+Cell[1156, 34, 809, 22, 152, "Input"],
+Cell[1968, 58, 1195, 18, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3200, 81, 15486, 342, 1139, "Input"],
+Cell[18689, 425, 9876, 187, 540, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
